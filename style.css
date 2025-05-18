@@ -181,51 +181,36 @@ nav ul li a {
   background: #1a252f;
 }
 
-  nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      z-index: 999;
-      padding: 10px 0;
-    }
+  .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2e6fc1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 20px;
-      flex-wrap: wrap;
-    }
+.nav-btn {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: #1f4a86;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
 
-    nav ul li a {
-      color: white;
-      font-weight: 600;
-      font-size: 1.15rem;
-      text-decoration: none;
-      padding: 10px 22px;
-      border-radius: 10px;
-      background: #2e6fc1;
-      box-shadow: 0 5px 12px rgba(46, 111, 193, 0.4);
-      transition: background 0.3s ease, transform 0.2s ease;
-      user-select: none;
-      display: block;
-      min-width: 140px;
-      text-align: center;
-    }
+.nav-btn:hover {
+  background-color: #15335e;
+  transform: scale(1.05);
+}
 
-    nav ul li a:hover {
-      background: #1f4a86;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(31, 74, 134, 0.6);
-    }
-
-    nav ul li a:active {
-      transform: translateY(-1px);
-      box-shadow: 0 5px 15px rgba(31, 74, 134, 0.5);
-    }
+/* Espaço pra não esconder o conteúdo atrás da navbar */
+body {
+  padding-top: 60px;
+}
