@@ -12,13 +12,13 @@ body {
   background: #f2f2f2;
   color: #333;
   scroll-behavior: smooth;
-  padding-top: 64px; /* Espaço padrão pra navbar no PC */
+  padding-top: 40px; /* Ajuste para acomodar a navbar fixa */
 }
 
 /* Ajuste para celulares */
 @media (max-width: 600px) {
   body {
-    padding-top: 120px; /* Espaço maior pra navbar no celular */
+    padding-top: 40px; /* Espaço maior pra navbar no celular */
   }
 }
 
@@ -92,23 +92,37 @@ p {
   width: 100%;
   background-color: #2e6fc1;
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px; /* Ajustado para o novo layout */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  flex-wrap: wrap;
+  z-index: 1050;
+  flex-wrap: nowrap;
+  color: white;
 }
 
-/* 🎨 Estilo dos botões da navbar */
+/* Marca (logo/nome) da navbar */
+.nav-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Botões do menu */
+.nav-menu {
+  display: flex;
+  gap: 12px;
+}
+
+/* Botões individuais */
 .nav-btn {
   color: white;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 12px 22px;
   background-color: #1f4a86;
   border-radius: 8px;
   font-weight: bold;
   transition: background 0.3s, transform 0.2s;
+  white-space: nowrap;
 }
 
 .nav-btn:hover {
@@ -116,24 +130,78 @@ p {
   transform: scale(1.05);
 }
 
-/* 📱 Responsivo */
-@media (max-width: 600px) {
+/* Esconde o checkbox */
+.nav-toggle-checkbox {
+  display: none;
+}
+
+/* Estilo do botão hamburger */
+.nav-toggle-label {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.nav-toggle-label span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  border-radius: 2px;
+  display: block;
+}
+
+/* RESPONSIVO - no celular */
+@media (max-width: 768px) {
+  /* Mostrar hamburger */
+  .nav-toggle-label {
+    display: flex;
+  }
+
+  /* Ajusta navbar */
   .navbar {
+    justify-content: space-between;
+  }
+
+  /* Esconde menu inicialmente */
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #2e6fc1;
     flex-direction: column;
-    align-items: center;
-    padding: 10px 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    border-radius: 0 0 10px 10px;
+    gap: 0;
+  }
+
+  /* Quando checkbox marcado, mostra menu */
+  .nav-toggle-checkbox:checked + .nav-toggle-label + .nav-menu {
+    max-height: 300px; /* ajustar conforme quantidade de links */
+    transition: max-height 0.5s ease-in;
+  }
+
+  /* Botões ocupam toda largura, com borda embaixo */
+  .nav-menu .nav-btn {
+    width: 100%;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 0;
+    text-align: center;
+  }
+}
+
+/* Ajustes para celulares menores */
+@media (max-width: 600px) {
+  body {
+    padding-top: 10px;
   }
 
   .nav-btn {
-    width: 100%;
-    max-width: 300px;
-    box-sizing: border-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding: 10px 12px;
     font-size: 1rem;
-    margin: 5px 0;
   }
 }
 
@@ -212,28 +280,24 @@ footer a:hover {
 .btn-matematica:hover {
   background: #357ABD;
 }
-
 .btn-portugues {
   background: #e67e22;
 }
 .btn-portugues:hover {
   background: #cf711c;
 }
-
 .btn-ciencias {
   background: #27ae60;
 }
 .btn-ciencias:hover {
   background: #1e8c4d;
 }
-
 .btn-historia {
   background: #8e44ad;
 }
 .btn-historia:hover {
   background: #732d91;
 }
-
 .btn-geografia {
   background: #2c3e50;
 }
