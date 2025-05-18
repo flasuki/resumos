@@ -4,127 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resumos 8º e 9º Ano 📚</title>
-  <style>
-    /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f2f4f8;
-      color: #333;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      background: linear-gradient(135deg, #4a90e2, #357ABD);
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      user-select: none;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 15px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      font-size: 1.1rem;
-      background: rgba(255, 255, 255, 0.15);
-      padding: 10px 20px;
-      border-radius: 10px;
-      transition: background 0.3s;
-    }
-
-    nav ul li a:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-
-    main {
-      flex: 1;
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    main section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-
-    main section p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-
-    footer {
-      background: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: #4a90e2;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    footer a:hover {
-      color: #7bb6f9;
-      text-decoration: underline;
-    }
-
-    /* Responsivo */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      nav ul li a {
-        font-size: 1.2rem;
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Resumos 📖</h1>
+    <p>Estude fácil, rápido e com estilo! 💡</p>
     <nav>
       <ul>
-        <li><a href="matematica/bimestresmath.html">Matemática ➗</a></li>
-        <li><a href="portugues/potuguesb.html">Português 📝</a></li>
-        <li><a href="/ciencias/ciencias.html">Ciências 🔬</a></li>
-        <li><a href="/historia/historia.html">História 🏛️</a></li>
-        <li><a href="/geografia/geografia.html">Geografia 🌍</a></li>
+        <li><a href="matematica/bimestresmath.html" class="btn-matematica">Matemática ➗</a></li>
+        <li><a href="portugues/potuguesb.html" class="btn-portugues">Português 📝</a></li>
+        <li><a href="/ciencias/ciencias.html" class="btn-ciencias">Ciências 🔬</a></li>
+        <li><a href="/historia/historia.html" class="btn-historia">História 🏛️</a></li>
+        <li><a href="/geografia/geografia.html" class="btn-geografia">Geografia 🌍</a></li>
       </ul>
     </nav>
   </header>
@@ -136,8 +28,5 @@
     </section>
   </main>
 
-  <footer>
-    <p>Feito por Flasuki © 2025 | <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-  </footer>
 </body>
 </html>
