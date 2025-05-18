@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resumos 8º e 9º Ano 📘</title>
   <style>
     body {
@@ -9,6 +10,8 @@
       margin: 0;
       background: #f2f2f2;
       scroll-behavior: smooth;
+      color: #333;
+      line-height: 1.5;
     }
     header {
       background: #3498db;
@@ -18,9 +21,14 @@
     }
     header h1 {
       font-size: 3em;
+      margin: 0;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2em;
     }
     header button {
-      margin-top: 20px;
+      margin-top: 30px;
       padding: 15px 30px;
       font-size: 1.2em;
       background: white;
@@ -28,7 +36,7 @@
       border: none;
       border-radius: 10px;
       cursor: pointer;
-      transition: 0.3s;
+      transition: background-color 0.3s, color 0.3s;
     }
     header button:hover {
       background: #2980b9;
@@ -36,17 +44,56 @@
     }
     section {
       max-width: 800px;
-      margin: auto;
+      margin: 40px auto;
       padding: 20px;
       background: white;
       border-radius: 10px;
-      margin-bottom: 40px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-size: 1.2rem; /* fonte legal para desktop */
     }
     h2 {
       color: #2c3e50;
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+    p {
+      margin: 12px 0;
+    }
+
+    /* Deixa os cálculos com font maior e mais legível */
+    p {
+      font-size: 1.3rem;
+    }
+
+    /* Responsividade pro celular */
+    @media (max-width: 480px) {
+      header {
+        padding: 50px 15px;
+      }
+      header h1 {
+        font-size: 2.2em;
+      }
+      header p {
+        font-size: 1em;
+      }
+      header button {
+        padding: 12px 24px;
+        font-size: 1em;
+      }
+      section {
+        margin: 20px 10px;
+        padding: 15px;
+        font-size: 1.5rem; /* maior pra facilitar leitura */
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1.4rem;
+      }
     }
   </style>
+
   <!-- MathJax para mostrar fórmulas -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async
@@ -58,7 +105,7 @@
   <header>
     <h1>📚 Resumos do 8º e 9º Ano</h1>
     <p>Estuda fácil, aprende rápido! 😎</p>
-    <a href="index.html"><button>Ver Resumos</button></a>
+    <button onclick="document.getElementById('resumos').scrollIntoView({behavior: 'smooth'})">Ver Resumos</button>
   </header>
 
   <div id="resumos">
@@ -93,7 +140,8 @@
       <p>c) \( 4{,}25656565\ldots = \frac{4211}{990} \) </p>
       <p>d) \( 2{,}555\ldots = 2 + \frac{5}{9} = \frac{23}{9} \) </p>
     </section>
-        <section>
+
+    <section>
       <h2>7️⃣ Monômios: coeficiente e parte literal</h2>
       <p>🧠 <strong>Coeficiente</strong>: número multiplicando as variáveis</p>
       <p>🧪 <strong>Parte literal</strong>: variáveis com seus expoentes</p>
@@ -103,7 +151,6 @@
       <p>c) \( \frac{15}{6}n^6m^4 = \frac{5}{2}n^6m^4 \) → Coeficiente: \( \frac{5}{2} \), Parte literal: \( n^6m^4 \) ✅</p>
       <p>d) \( 12{,}4xab \) → Coeficiente: 12,4, Parte literal: \( xab \) </p>
     </section>
-
 
     <section>
       <h2>8️⃣ Grau dos polinômios</h2>
@@ -117,11 +164,4 @@
       <h2>🔟 Soma e subtração de polinômios</h2>
       <p>a) \( 3x^2 + 5x^3 - 15x^2 + 12x^2 = 5x^3 + (3 - 15 + 12)x^2 = 5x^3 + 0x^2 \) </p>
       <p>b) Soma dos termos:
-        <br> \( A^3B + 22A^3B - 4A^3B + 2A^3B = 21A^3B \) 
-        <br> \( 14AB^3 - 5AB^3 = 9AB^3 \) 
-      </p>
-    </section>
-  </div>
-
-</body>
-</html>
+        <br> \( A^3B + 22A^3B - 4A^3B + 2A^3B =
