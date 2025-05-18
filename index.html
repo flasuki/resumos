@@ -2,21 +2,123 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resumos 8º e 9º Ano 📚</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* RESET básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 8px;
+      user-select: none;
+    }
+    header p {
+      font-size: 1.2rem;
+      font-weight: 500;
+      opacity: 0.85;
+      user-select: none;
+    }
+    nav {
+      margin-top: 20px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background: #357ABD;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+    nav ul li a:hover {
+      background: #2a5d9f;
+    }
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    main section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    main section p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+    footer {
+      background: #f0f0f0;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+      color: #555;
+      user-select: none;
+    }
+    footer a {
+      color: #4a90e2;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: #357ABD;
+      text-decoration: underline;
+    }
+
+    /* Responsividade simples */
+    @media (max-width: 480px) {
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+      nav ul li a {
+        display: block;
+        font-size: 1.3rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Resumos Escolares 📖</h1>
-    <p>8º e 9º Ano - Tudo mastigadinho 😎</p>
+    <h1>Resumos📖</h1>
+    <p>Tudo mastigadinho 😎</p>
     <nav>
       <ul>
-        <li><a href="#">Matemática ➗</a></li>
-        <li><a href="#">Português 📝</a></li>
-        <li><a href="#">Ciências 🔬</a></li>
-        <li><a href="#">História 🏛️</a></li>
-        <li><a href="#">Geografia 🌍</a></li>
+        <li><a href="matematica.html">Matemática ➗</a></li>
+        <li><a href="portugues.html">Português 📝</a></li>
+        <li><a href="ciencias.html">Ciências 🔬</a></li>
+        <li><a href="historia.html">História 🏛️</a></li>
+        <li><a href="geografia.html">Geografia 🌍</a></li>
       </ul>
     </nav>
   </header>
@@ -24,18 +126,12 @@
   <main>
     <section>
       <h2>📌 Bem-vindo!</h2>
-      <p>Aqui você encontra resumos rápidos, direto ao ponto e cheios de dicas pra mandar bem na escola! 🚀</p>
-    </section>
-
-    <section>
-      <h2>📘 Exemplo de Resumo: Potências</h2>
-      <p><strong>Potência com expoente fracionário:</strong>  
-      \( 16^{\frac{1}{2}} = \sqrt{16} = 4 \) ✅</p>
+      <p>Aqui você encontra resumos rápidos, direto ao ponto e cheios de dicas! 🚀</p>
     </section>
   </main>
 
   <footer>
-    <p>Feito por Flasuki © 2025 | <a href="https://github.com/flasuki">GitHub</a></p>
+    <p>Feito por Flasuki © 2025 | <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer">GitHub</a></p>
   </footer>
 </body>
 </html>
