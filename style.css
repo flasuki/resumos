@@ -1,72 +1,83 @@
-/* Importa a fonte estilosa */
+/* Fonte estilosa */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
+/* BODY: fundo branco com toque lilás claro, texto roxo escuro */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #141414;
-  color: #ffffff;
-  scroll-behavior: smooth;
+  background-color: #faf7ff; /* lilás clarinho */
+  color: #3a1f5f; /* roxo escuro */
   padding-top: 80px;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* NAVBAR COM BLUR */
+/* NAVBAR fixa, transparente e elegante roxa */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(20, 20, 20, 0.8);
-  backdrop-filter: blur(10px);
-  padding: 20px 30px;
+  background: rgba(74, 35, 90, 0.85); /* roxo escuro translúcido */
+  backdrop-filter: blur(8px);
+  padding: 18px 30px;
   z-index: 999;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: #e8def8; /* lilás claro */
   font-weight: 700;
   font-size: 1.2rem;
+  border-bottom: 1px solid rgba(232, 222, 248, 0.15);
+  transition: background 0.3s ease;
 }
 
+.navbar:hover {
+  background: rgba(74, 35, 90, 0.95);
+}
+
+/* Marca com espaçamento e peso */
 .nav-brand {
-  font-weight: 900;
+  font-weight: 800;
   font-size: 1.8rem;
-  letter-spacing: 3px;
-  color: #e50914;
+  letter-spacing: 2px;
   user-select: none;
+  color: #e8def8;
 }
 
+/* Menu flexível */
 .nav-menu {
   display: flex;
-  gap: 18px;
+  gap: 20px;
 }
 
+/* Botões do menu simples, transparentes com borda roxa suave */
 .nav-btn {
-  color: #e5e5e5;
+  color: #d9c9f5;
   text-decoration: none;
-  padding: 10px 22px;
+  padding: 8px 20px;
   background-color: transparent;
   border: 2px solid transparent;
   border-radius: 6px;
-  font-weight: 700;
+  font-weight: 600;
   transition: all 0.25s ease;
-  white-space: nowrap;
   cursor: pointer;
 }
 
 .nav-btn:hover {
-  color: #e50914;
-  border-color: #e50914;
-  background-color: #1f1f1f;
+  color: #b69de9;
+  border-color: #b69de9;
+  background-color: #f0e9ff;
   transform: scale(1.05);
 }
 
+/* Hamburger menu - escondido no desktop */
 .nav-toggle-checkbox {
   display: none;
 }
@@ -81,11 +92,12 @@ body {
 .nav-toggle-label span {
   height: 3px;
   width: 25px;
-  background: white;
+  background: #e8def8;
   border-radius: 2px;
   display: block;
 }
 
+/* Responsivo - menu móvel */
 @media (max-width: 768px) {
   .nav-toggle-label {
     display: flex;
@@ -97,29 +109,29 @@ body {
 
   .nav-menu {
     position: absolute;
-    top: 60px;
+    top: 58px;
     left: 0;
     right: 0;
-    background: #141414;
+    background: #4a235a;
     flex-direction: column;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.3s ease;
     border-radius: 0 0 10px 10px;
     gap: 0;
   }
 
   .nav-toggle-checkbox:checked + .nav-toggle-label + .nav-menu {
-    max-height: 300px;
-    transition: max-height 0.5s ease-in;
+    max-height: 260px;
   }
 
   .nav-menu .nav-btn {
     width: 100%;
     padding: 15px 20px;
-    border-bottom: 1px solid rgba(229, 9, 20, 0.3);
+    border-bottom: 1px solid rgba(232, 222, 248, 0.15);
     margin: 0;
     text-align: center;
+    font-weight: 600;
   }
 }
 
@@ -129,121 +141,184 @@ body {
   }
 }
 
+/* HEADER: fundo lilás clarinho com sombra leve */
 header {
+  background: #f5f0ff;
+  color: #3a1f5f;
+  padding: 80px 20px 50px;
   text-align: center;
-  padding: 120px 20px 60px;
-  background: linear-gradient(to bottom, #141414, #1f1f1f);
+  box-shadow: 0 2px 8px rgba(58, 31, 95, 0.1);
+  border-radius: 0 0 20px 20px;
 }
 
 header h1 {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
+  margin-bottom: 12px;
   font-weight: 700;
-  color: #e50914;
-  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 header p {
   font-size: 1.2rem;
-  color: #ccc;
-  max-width: 600px;
+  opacity: 0.85;
+  max-width: 700px;
   margin: 0 auto 30px;
+  line-height: 1.5;
 }
 
+/* Botão do header roxo elegante */
 header a button {
-  background-color: #e50914;
+  background-color: #7c4dff;
   color: #fff;
   border: none;
-  padding: 15px 40px;
+  padding: 14px 40px;
   font-size: 1.1rem;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 12px rgba(229, 9, 20, 0.4);
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 0 10px #7c4dffaa;
 }
 
 header a button:hover {
-  background-color: #ff0a16;
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
+  background-color: #5a31cc;
+  box-shadow: 0 0 20px #5a31cccc;
 }
 
+/* SECTIONS: fundo lilás médio com cantos suaves */
 section {
   max-width: 900px;
-  margin: 50px auto;
-  padding: 30px;
-  background-color: #1c1c1c;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s;
+  margin: 40px auto;
+  padding: 30px 35px;
+  background-color: #d9c9f5;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(123, 83, 217, 0.15);
+  transition: transform 0.25s ease;
 }
 
 section:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
+/* Títulos das sections */
 h2 {
-  color: #e50914;
-  margin-bottom: 20px;
-  font-size: 2.2rem;
+  color: #7c4dff;
+  margin-bottom: 18px;
+  font-size: 2.1rem;
+  font-weight: 700;
 }
 
+/* Texto das sections */
 p {
   font-size: 1.1rem;
-  color: #dddddd;
+  color: #4a235a;
+  line-height: 1.6;
 }
 
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2.2rem;
-  }
-
-  header p {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  section {
-    margin: 20px 10px;
-    padding: 20px;
-  }
-}
-
+/* FOOTER: fundo lilás clarinho com texto roxo escuro */
 footer {
-  background-color: #111;
-  color: #aaa;
+  background-color: #faf7ff;
+  color: #3a1f5f;
   text-align: center;
-  padding: 40px 20px;
+  padding: 30px 20px;
   font-size: 1rem;
-  border-top: 2px solid #e50914;
-  margin-top: 80px;
+  border-top: 2px solid #7c4dff;
+  margin-top: 60px;
   font-weight: 600;
 }
 
 footer a {
-  color: #e50914;
+  color: #7c4dff;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
+/* Botões padrão roxos - simples e elegantes */
 .btn {
-  color: #e5e5e5;
+  color: #fff;
   text-decoration: none;
   font-weight: 700;
   font-size: 1.1rem;
-  padding: 10px 22px;
-  border-radius: 6px;
-  transition: background 0.3s, color 0.3s;
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
   display: inline-block;
-  background-color: #e50914;
-  box-shadow: 0 0 15px #e50914;
+  background-color: #7c4dff;
+  box-shadow: 0 0 12px #7c4dffaa;
 }
 
 .btn:hover {
-  background-color: #b00710;
-  box-shadow: 0 0 20px #b00710;
+  background-color: #5a31cc;
   color: #fff;
+  transform: scale(1.03);
+  box-shadow: 0 0 18px #5a31cccc;
+}
+
+
+/* --- Tema Dark --- */
+
+body.dark-theme {
+  background-color: #1e1e2f;  /* fundo escuro roxo/azulado */
+  color: #ccc; /* texto claro */
+}
+
+body.dark-theme .navbar {
+  background: rgba(40, 30, 60, 0.9);
+  color: #ddd;
+  border-bottom: 1px solid rgba(200, 200, 255, 0.15);
+}
+
+body.dark-theme .nav-brand,
+body.dark-theme .nav-btn {
+  color: #d4c0ff;
+}
+
+body.dark-theme .nav-btn:hover {
+  color: #ffdd57;
+  border-color: #ffdd57;
+  background-color: #3c2f59;
+  transform: scale(1.05);
+}
+
+body.dark-theme header {
+  background: #2a2540;
+  color: #ddd;
+  box-shadow: 0 2px 8px rgba(100, 90, 150, 0.7);
+}
+
+body.dark-theme header a button {
+  background-color: #9266ff;
+  box-shadow: 0 0 10px #9266ffaa;
+}
+
+body.dark-theme header a button:hover {
+  background-color: #6c42cc;
+  box-shadow: 0 0 20px #6c42cccc;
+}
+
+body.dark-theme section {
+  background-color: #322e4a;
+  box-shadow: 0 4px 15px rgba(100, 90, 150, 0.3);
+}
+
+body.dark-theme h2 {
+  color: #a081ff;
+}
+
+body.dark-theme p {
+  color: #ccc;
+}
+
+body.dark-theme footer {
+  background-color: #1e1e2f;
+  color: #bbb;
+  border-top: 2px solid #9266ff;
+}
+
+body.dark-theme footer a {
+  color: #a081ff;
 }
