@@ -1,5 +1,5 @@
 /* Importa a fonte estilosa */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 * {
   margin: 0;
@@ -9,133 +9,68 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f2f2f2;
-  color: #333;
+  background-color: #141414;
+  color: #ffffff;
   scroll-behavior: smooth;
-  padding-top: 40px; /* Ajuste para acomodar a navbar fixa */
+  padding-top: 80px;
+  line-height: 1.6;
 }
 
-/* Ajuste para celulares */
-@media (max-width: 600px) {
-  body {
-    padding-top: 40px; /* Espaço maior pra navbar no celular */
-  }
-}
-
-/* 🌟 HEADER ESTILOSO */
-header {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: white;
-  padding: 100px 20px 60px;
-  text-align: center;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-}
-
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-}
-
-header p {
-  font-size: 1.3rem;
-  opacity: 0.9;
-}
-
-header a button {
-  margin-top: 30px;
-  padding: 15px 35px;
-  font-size: 1.2rem;
-  background: #fff;
-  color: #2a5298;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-header a button:hover {
-  background: #2a5298;
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-/* 📄 CONTEÚDO */
-section {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  font-size: 1.2rem;
-}
-
-h2 {
-  color: #2c3e50;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 1.3rem;
-  margin: 10px 0;
-}
-
-/* 🌐 Navbar fixa no topo */
+/* NAVBAR COM BLUR */
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  background-color: #2e6fc1;
+  background-color: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 20px 30px;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px; /* Ajustado para o novo layout */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1050;
-  flex-wrap: nowrap;
   color: white;
-}
-
-/* Marca (logo/nome) da navbar */
-.nav-brand {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
-/* Botões do menu */
+.nav-brand {
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  color: #e50914;
+  user-select: none;
+}
+
 .nav-menu {
   display: flex;
-  gap: 12px;
+  gap: 18px;
 }
 
-/* Botões individuais */
 .nav-btn {
-  color: white;
+  color: #e5e5e5;
   text-decoration: none;
-  padding: 12px 22px;
-  background-color: #1f4a86;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.2s;
+  padding: 10px 22px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: all 0.25s ease;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .nav-btn:hover {
-  background-color: #15335e;
+  color: #e50914;
+  border-color: #e50914;
+  background-color: #1f1f1f;
   transform: scale(1.05);
 }
 
-/* Esconde o checkbox */
 .nav-toggle-checkbox {
   display: none;
 }
 
-/* Estilo do botão hamburger */
 .nav-toggle-label {
   display: none;
   flex-direction: column;
@@ -151,25 +86,21 @@ p {
   display: block;
 }
 
-/* RESPONSIVO - no celular */
 @media (max-width: 768px) {
-  /* Mostrar hamburger */
   .nav-toggle-label {
     display: flex;
   }
 
-  /* Ajusta navbar */
   .navbar {
     justify-content: space-between;
   }
 
-  /* Esconde menu inicialmente */
   .nav-menu {
     position: absolute;
     top: 60px;
     left: 0;
     right: 0;
-    background: #2e6fc1;
+    background: #141414;
     flex-direction: column;
     max-height: 0;
     overflow: hidden;
@@ -178,129 +109,141 @@ p {
     gap: 0;
   }
 
-  /* Quando checkbox marcado, mostra menu */
   .nav-toggle-checkbox:checked + .nav-toggle-label + .nav-menu {
-    max-height: 300px; /* ajustar conforme quantidade de links */
+    max-height: 300px;
     transition: max-height 0.5s ease-in;
   }
 
-  /* Botões ocupam toda largura, com borda embaixo */
   .nav-menu .nav-btn {
     width: 100%;
     padding: 15px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(229, 9, 20, 0.3);
     margin: 0;
     text-align: center;
   }
 }
 
-/* Ajustes para celulares menores */
 @media (max-width: 600px) {
-  body {
-    padding-top: 10px;
-  }
-
   .nav-btn {
     font-size: 1rem;
   }
 }
 
-@media (max-width: 480px) {
-  header {
-    padding: 60px 15px;
-  }
+header {
+  text-align: center;
+  padding: 120px 20px 60px;
+  background: linear-gradient(to bottom, #141414, #1f1f1f);
+}
 
+header h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #e50914;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+header a button {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(229, 9, 20, 0.4);
+}
+
+header a button:hover {
+  background-color: #ff0a16;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
+}
+
+section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+section:hover {
+  transform: translateY(-3px);
+}
+
+h2 {
+  color: #e50914;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #dddddd;
+}
+
+@media (max-width: 600px) {
   header h1 {
     font-size: 2.2rem;
   }
 
   header p {
-    font-size: 1.1rem;
-  }
-
-  header a button {
-    padding: 12px 20px;
     font-size: 1rem;
-    width: auto;
-    max-width: 90%;
-    display: block;
-    margin: 20px auto 0;
-    white-space: nowrap;
+    padding: 0 10px;
   }
 
   section {
     margin: 20px 10px;
-    padding: 15px;
+    padding: 20px;
   }
 }
 
-/* 🧼 FOOTER BONITO E FIXO */
 footer {
-  background: #1e3c72;
-  color: white;
+  background-color: #111;
+  color: #aaa;
   text-align: center;
-  padding: 30px 20px;
-  border-top: 5px solid #2a5298;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  margin-top: 40px;
-}
-
-footer p {
-  font-size: 1.1rem;
-  margin: 8px 0;
+  padding: 40px 20px;
+  font-size: 1rem;
+  border-top: 2px solid #e50914;
+  margin-top: 80px;
+  font-weight: 600;
 }
 
 footer a {
-  color: #dbe9ff;
+  color: #e50914;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
-/* 🖌️ Botões coloridos por matéria (se quiser usar no futuro) */
 .btn {
-  color: white;
+  color: #e5e5e5;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.1rem;
-  padding: 10px 20px;
-  border-radius: 10px;
-  transition: background 0.3s;
+  padding: 10px 22px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
   display: inline-block;
+  background-color: #e50914;
+  box-shadow: 0 0 15px #e50914;
 }
 
-.btn-matematica {
-  background: #4a90e2;
-}
-.btn-matematica:hover {
-  background: #357ABD;
-}
-.btn-portugues {
-  background: #e67e22;
-}
-.btn-portugues:hover {
-  background: #cf711c;
-}
-.btn-ciencias {
-  background: #27ae60;
-}
-.btn-ciencias:hover {
-  background: #1e8c4d;
-}
-.btn-historia {
-  background: #8e44ad;
-}
-.btn-historia:hover {
-  background: #732d91;
-}
-.btn-geografia {
-  background: #2c3e50;
-}
-.btn-geografia:hover {
-  background: #1a252f;
+.btn:hover {
+  background-color: #b00710;
+  box-shadow: 0 0 20px #b00710;
+  color: #fff;
 }
