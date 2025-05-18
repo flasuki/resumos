@@ -322,3 +322,27 @@ body.dark-theme footer {
 body.dark-theme footer a {
   color: #a081ff;
 }
+
+
+.toggle-btn {
+  position: fixed;
+  bottom: 25px; /* antes era top: 10px */
+  left: 550px;   /* antes era right: 10px */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  z-index: 1000;
+}
+
+.dark-theme .toggle-btn {
+  color: #fff;
+}
+
+
+.nav-brand a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}

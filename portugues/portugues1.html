@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resumos 1º bimestre 📘</title>
   <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
@@ -15,8 +17,12 @@
     }
   </script>
 <nav class="navbar">
-  <button id="toggle-theme" class="nav-btn">Dark Mode</button>
-  <div class="nav-brand">flasuki</div>
+ <button id="toggle-theme" class="toggle-btn">
+  <i class="fas fa-moon"></i>
+</button>
+  <div class="nav-brand">
+  <a href="../index.html" target="_blank">flasuki</a>
+</div>
 
   <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" />
   <label for="nav-toggle" class="nav-toggle-label">
@@ -135,24 +141,26 @@
 
 <script>
   const btn = document.getElementById('toggle-theme');
+  const icon = btn.querySelector('i');
 
-  // Aplica o tema salvo no localStorage quando a página carrega
-  if(localStorage.getItem('dark-mode') === 'enabled'){
+  // Verifica o tema salvo
+  if (localStorage.getItem('dark-mode') === 'enabled') {
     document.body.classList.add('dark-theme');
-    btn.textContent = 'Light Mode';
+    icon.className = 'fas fa-sun';
   } else {
-    btn.textContent = 'Dark Mode';
+    icon.className = 'fas fa-moon';
   }
 
+  // Quando clicar no botão
   btn.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
 
-    if(document.body.classList.contains('dark-theme')){
+    if (document.body.classList.contains('dark-theme')) {
       localStorage.setItem('dark-mode', 'enabled');
-      btn.textContent = 'Light Mode';
+      icon.className = 'fas fa-sun'; // muda pra sol
     } else {
       localStorage.setItem('dark-mode', 'disabled');
-      btn.textContent = 'Dark Mode';
+      icon.className = 'fas fa-moon'; // muda pra lua
     }
   });
 </script>
