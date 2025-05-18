@@ -5,9 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resumos 1º bimestre 📘</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+    }
     body {
       font-family: sans-serif;
-      margin: 0;
       background: #f2f2f2;
       scroll-behavior: smooth;
       color: #333;
@@ -44,6 +52,7 @@
     }
     section {
       max-width: 800px;
+      width: 90%;
       margin: 40px auto;
       padding: 20px;
       background: white;
@@ -59,6 +68,26 @@
     p {
       margin: 12px 0;
       font-size: 1.3rem;
+    }
+    footer {
+      background: #3498db;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+      border-top: 5px solid #2980b9;
+    }
+    footer p {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+    footer a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
     @media (max-width: 480px) {
       header {
@@ -86,30 +115,16 @@
         font-size: 1.4rem;
       }
     }
-    footer {
-      background: #3498db;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 50px;
-      border-top: 5px solid #2980b9;
-    }
-    footer p {
-      margin: 10px 0;
-      font-size: 1.2rem;
-    }
-    footer a {
-      color: #ecf0f1;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
   </style>
-</head>
-<body>
 
+  <!-- MathJax para fórmulas -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+
+<body>
   <header>
     <h1>📚 Resumo do 1º bimestre</h1>
     <p>Estuda fácil, aprende rápido! 😎</p>
@@ -117,20 +132,7 @@
   </header>
 
   <div id="resumos">
-     </style>
-
-  <!-- MathJax para mostrar fórmulas -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-</head>
-<body>
-
- 
-
-  <div id="resumos">
-    <section>
+ <section>
       <h2>1️⃣ Potências com expoente fracionário</h2>
       <p>a) \( 16^{\frac{2}{4}} = 256^{\frac{1}{2}} = 4 \) </p>
       <p>b) \( 49^{\frac{3}{2}} = 7^3 = 343 \) </p>
@@ -187,13 +189,11 @@
       <p>b) Soma dos termos:
         <br> \( A^3B + 22A^3B - 4A^3B + 2A^3B =
   </div>
+  </div>
 
   <footer>
     <p>📘 Site criado por <a href="https://youtube.com/@flasuki" target="_blank">flasuki</a> com ❤️ e HTML.</p>
     <p>💡 Dica do dia: estuda um pouco agora e joga depois! Equilíbrio é tudo. 😄</p>
   </footer>
-
 </body>
 </html>
-
-  
