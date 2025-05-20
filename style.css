@@ -8,76 +8,115 @@
   scroll-behavior: smooth;
 }
 
-/* BODY: fundo branco com toque lilás claro, texto roxo escuro */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #faf7ff; /* lilás clarinho */
-  color: #3a1f5f; /* roxo escuro */
+  background-color: #f2fdf6; /* verde menta clarinho */
+  color: #2f4f4f; /* cinza esverdeado escuro */
   padding-top: 80px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* NAVBAR fixa, transparente e elegante roxa */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(74, 35, 90, 0.85); /* roxo escuro translúcido */
+  background: rgba(40, 80, 70, 0.85); /* verde escuro translúcido */
   backdrop-filter: blur(8px);
   padding: 18px 30px;
   z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #e8def8; /* lilás claro */
+  color: #e6fff2;
   font-weight: 700;
   font-size: 1.2rem;
-  border-bottom: 1px solid rgba(232, 222, 248, 0.15);
+  border-bottom: 1px solid rgba(230, 255, 242, 0.15);
   transition: background 0.3s ease;
 }
 
 .navbar:hover {
-  background: rgba(74, 35, 90, 0.95);
+  background: rgba(40, 80, 70, 0.95);
 }
 
-/* Marca com espaçamento e peso */
 .nav-brand {
+  position: relative;
   font-weight: 800;
   font-size: 1.8rem;
   letter-spacing: 2px;
   user-select: none;
-  color: #e8def8;
+  color: #e6fff2;
+  display: flex;
+  align-items: center;
 }
 
-/* Menu flexível */
+#toggle-theme {
+  position: fixed;
+  left: 3px;
+  top: 3px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  z-index: 1001;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-brand a {
+  position: relative;
+  z-index: 1;
+  margin-left: 12px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .nav-menu {
   display: flex;
   gap: 20px;
 }
 
-/* Botões do menu simples, transparentes com borda roxa suave */
 .nav-btn {
-  color: #d9c9f5;
+  display: inline-block;
+  background: #2e7d32; /* verde escuro e forte */
+  color: #e0f2f1; /* verde clarinho pra contraste */
+  padding: 12px 24px;
+  margin: 6px 12px 6px 0;
+  border-radius: 999px;
+  font-weight: 700;
   text-decoration: none;
-  padding: 8px 20px;
-  background-color: transparent;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.5);
+  transition: all 0.3s ease;
+  user-select: none;
   border: 2px solid transparent;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: all 0.25s ease;
-  cursor: pointer;
 }
 
 .nav-btn:hover {
-  color: #b69de9;
-  border-color: #b69de9;
-  background-color: #f0e9ff;
-  transform: scale(1.05);
+  background: #81c784; /* verde claro e vibrante */
+  color: #1b5e20; /* verde escuro pro texto */
+  box-shadow: 0 6px 20px rgba(129, 199, 132, 0.7);
+  transform: translateY(-4px) scale(1.05);
+  border-color: #1b5e20;
 }
 
-/* Hamburger menu - escondido no desktop */
+
+
+
+.nav-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 242, 254, 0.4);
+}
+
 .nav-toggle-checkbox {
   display: none;
 }
@@ -85,19 +124,39 @@ body {
 .nav-toggle-label {
   display: none;
   flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 40px;
+  height: 35px;
   cursor: pointer;
-  gap: 5px;
+  z-index: 1000;
 }
 
 .nav-toggle-label span {
-  height: 3px;
-  width: 25px;
-  background: #e8def8;
-  border-radius: 2px;
   display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #e6fff2;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-/* Responsivo - menu móvel */
+.nav-toggle-checkbox:checked + .nav-toggle-label span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.nav-toggle-checkbox:checked + .nav-toggle-label span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle-checkbox:checked + .nav-toggle-label span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+body.dark-theme .nav-toggle-label span {
+  background-color: #b8e9d3;
+}
+
 @media (max-width: 768px) {
   .nav-toggle-label {
     display: flex;
@@ -112,7 +171,7 @@ body {
     top: 58px;
     left: 0;
     right: 0;
-    background: #4a235a;
+    background: #285046;
     flex-direction: column;
     max-height: 0;
     overflow: hidden;
@@ -125,13 +184,17 @@ body {
     max-height: 260px;
   }
 
-  .nav-menu .nav-btn {
-    width: 100%;
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(232, 222, 248, 0.15);
-    margin: 0;
-    text-align: center;
-    font-weight: 600;
+
+
+  .nav-menu .nav-btn:hover {
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 242, 254, 0.6);
+  }
+
+  .nav-menu .nav-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 242, 254, 0.4);
   }
 }
 
@@ -141,13 +204,15 @@ body {
   }
 }
 
-/* HEADER: fundo lilás clarinho com sombra leve */
+/* ... resto do seu CSS como header, section, footer, dark-theme etc. permanece igual ... */
+
+
 header {
-  background: #f5f0ff;
-  color: #3a1f5f;
+  background: #e6fff2;
+  color: #2f4f4f;
   padding: 80px 20px 50px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(58, 31, 95, 0.1);
+  box-shadow: 0 2px 8px rgba(40, 80, 70, 0.1);
   border-radius: 0 0 20px 20px;
 }
 
@@ -166,9 +231,8 @@ header p {
   line-height: 1.5;
 }
 
-/* Botão do header roxo elegante */
 header a button {
-  background-color: #7c4dff;
+  background-color: #3bb77e;
   color: #fff;
   border: none;
   padding: 14px 40px;
@@ -177,22 +241,21 @@ header a button {
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: 600;
-  box-shadow: 0 0 10px #7c4dffaa;
+  box-shadow: 0 0 10px #3bb77eaa;
 }
 
 header a button:hover {
-  background-color: #5a31cc;
-  box-shadow: 0 0 20px #5a31cccc;
+  background-color: #289e6c;
+  box-shadow: 0 0 20px #289e6caa;
 }
 
-/* SECTIONS: fundo lilás médio com cantos suaves */
 section {
   max-width: 900px;
   margin: 40px auto;
   padding: 30px 35px;
-  background-color: #d9c9f5;
+  background-color: #d7f9e5;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(123, 83, 217, 0.15);
+  box-shadow: 0 4px 15px rgba(59, 183, 126, 0.15);
   transition: transform 0.25s ease;
 }
 
@@ -200,35 +263,32 @@ section:hover {
   transform: translateY(-4px);
 }
 
-/* Títulos das sections */
 h2 {
-  color: #7c4dff;
+  color: #3bb77e;
   margin-bottom: 18px;
   font-size: 2.1rem;
   font-weight: 700;
 }
 
-/* Texto das sections */
 p {
   font-size: 1.1rem;
-  color: #4a235a;
+  color: #2f4f4f;
   line-height: 1.6;
 }
 
-/* FOOTER: fundo lilás clarinho com texto roxo escuro */
 footer {
-  background-color: #faf7ff;
-  color: #3a1f5f;
+  background-color: #f2fdf6;
+  color: #2f4f4f;
   text-align: center;
   padding: 30px 20px;
   font-size: 1rem;
-  border-top: 2px solid #7c4dff;
+  border-top: 2px solid #3bb77e;
   margin-top: 60px;
   font-weight: 600;
 }
 
 footer a {
-  color: #7c4dff;
+  color: #3bb77e;
   text-decoration: none;
   font-weight: 700;
 }
@@ -237,7 +297,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Botões padrão roxos - simples e elegantes */
 .btn {
   color: #fff;
   text-decoration: none;
@@ -247,102 +306,128 @@ footer a:hover {
   border-radius: 8px;
   transition: background 0.3s ease;
   display: inline-block;
-  background-color: #7c4dff;
-  box-shadow: 0 0 12px #7c4dffaa;
+  background-color: #3bb77e;
+  box-shadow: 0 0 12px #3bb77eaa;
 }
 
 .btn:hover {
-  background-color: #5a31cc;
+  background-color: #289e6c;
   color: #fff;
   transform: scale(1.03);
-  box-shadow: 0 0 18px #5a31cccc;
+  box-shadow: 0 0 18px #289e6caa;
 }
 
-
-/* --- Tema Dark --- */
-
 body.dark-theme {
-  background-color: #1e1e2f;  /* fundo escuro roxo/azulado */
-  color: #ccc; /* texto claro */
+  background-color: #1b2b2b;
+  color: #e0f7ec;
 }
 
 body.dark-theme .navbar {
-  background: rgba(40, 30, 60, 0.9);
-  color: #ddd;
-  border-bottom: 1px solid rgba(200, 200, 255, 0.15);
+  background: rgba(20, 40, 30, 0.9);
+  color: #d0ffef;
+  border-bottom: 1px solid rgba(200, 255, 230, 0.15);
 }
 
 body.dark-theme .nav-brand,
 body.dark-theme .nav-btn {
-  color: #d4c0ff;
+  color: #b8e9d3;
 }
 
 body.dark-theme .nav-btn:hover {
   color: #ffdd57;
   border-color: #ffdd57;
-  background-color: #3c2f59;
+  background-color: #2e463f;
   transform: scale(1.05);
 }
 
 body.dark-theme header {
-  background: #2a2540;
-  color: #ddd;
-  box-shadow: 0 2px 8px rgba(100, 90, 150, 0.7);
+  background: #223b34;
+  color: #e0f7ec;
+  box-shadow: 0 2px 8px rgba(100, 200, 150, 0.2);
 }
 
 body.dark-theme header a button {
-  background-color: #9266ff;
-  box-shadow: 0 0 10px #9266ffaa;
+  background-color: #3bb77e;
+  box-shadow: 0 0 10px #3bb77eaa;
 }
 
 body.dark-theme header a button:hover {
-  background-color: #6c42cc;
-  box-shadow: 0 0 20px #6c42cccc;
+  background-color: #289e6c;
+  box-shadow: 0 0 20px #289e6caa;
 }
 
 body.dark-theme section {
-  background-color: #322e4a;
-  box-shadow: 0 4px 15px rgba(100, 90, 150, 0.3);
+  background-color: #2e463f;
+  box-shadow: 0 4px 15px rgba(59, 183, 126, 0.3);
 }
 
 body.dark-theme h2 {
-  color: #a081ff;
+  color: #3bb77e;
 }
 
 body.dark-theme p {
-  color: #ccc;
+  color: #e0f7ec;
 }
 
 body.dark-theme footer {
-  background-color: #1e1e2f;
-  color: #bbb;
-  border-top: 2px solid #9266ff;
+  background-color: #1b2b2b;
+  color: #d0ffef;
+  border-top: 2px solid #3bb77e;
 }
 
 body.dark-theme footer a {
-  color: #a081ff;
+  color: #3bb77e;
 }
-
 
 .toggle-btn {
   position: fixed;
-  bottom: 25px; /* antes era top: 10px */
-  left: 550px;   /* antes era right: 10px */
-  background: none;
+  bottom: 20px;
+  right: 20px;
+  background: #3bb77e;
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #333;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #3bb77eaa;
   z-index: 1000;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.toggle-btn:hover {
+  background: #289e6c;
+  transform: scale(1.1);
 }
 
 .dark-theme .toggle-btn {
+  background: #3bb77e;
   color: #fff;
 }
 
-
-.nav-brand a {
-  color: inherit;
+.subject-card {
+  display: inline-block;
+  background: #5A6E7F; /* cinza azulado chique */
+  color: white;
+  padding: 15px 25px;
+  margin: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
   text-decoration: none;
-  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(90, 110, 127, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  user-select: none;
 }
+
+.subject-card:hover {
+  background: #465A6A; /* escurece no hover */
+  box-shadow: 0 6px 15px rgba(70, 90, 106, 0.6);
+  transform: translateY(-3px);
+}
+
+.subject-card:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(70, 90, 106, 0.5);
+}
+
