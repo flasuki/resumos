@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Regência Nominal</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
+    }
+    strong {
+      color: #289e6c;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+    th, td {
+      border: 1px solid #3bb77e;
+      padding: 0.6rem 1rem;
+      text-align: left;
+    }
+    th {
+      background-color: #3bb77e;
+      color: white;
+    }
+    caption {
+      caption-side: top;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #289e6c;
+    }
+    .exemplo {
+      font-style: italic;
+      color: #555;
+      margin-left: 1.5rem;
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão tema -->
+  <button id="toggle-theme" aria-label="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Botão voltar -->
+  <a href="../index.html" class="back-btn" aria-label="Voltar para página principal">
+    ← Voltar para Matérias
+  </a>
+
+  <h1>Regência Nominal 🤔🔗</h1>
+
+  <p>A regência nominal é a relação de dependência que existe entre um nome (substantivo, adjetivo ou advérbio) e seus complementos. Essa relação é feita, na maioria das vezes, por meio de preposições que ligam o nome ao seu complemento, completando o sentido da frase.</p>
+
+  <h2>Como funciona? ⚙️</h2>
+  <ul>
+    <li>O nome (substantivo, adjetivo ou advérbio) é o termo regente.</li>
+    <li>O complemento, que depende do nome para completar o sentido, é o termo regido.</li>
+    <li>A ligação entre eles é feita por uma preposição que deve ser usada corretamente para que a frase faça sentido.</li>
+  </ul>
+
+  <h2>Exemplos de Regência Nominal 📝</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tipo de Nome</th>
+        <th>Exemplo de Nome + Preposição + Complemento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Substantivo</td>
+        <td>Tenho medo de baratas. 🐜</td>
+      </tr>
+      <tr>
+        <td>Adjetivo</td>
+        <td>Ela está contrária a essa ideia. ❌</td>
+      </tr>
+      <tr>
+        <td>Advérbio</td>
+        <td>Ele falou relativamente a esse assunto. 🗣️</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Exemplos práticos com frases 📚</h2>
+  <ul>
+    <li>Sinto admiração por ela. 🌟</li>
+    <li>Tenho dificuldade em matemática. ➗</li>
+    <li>Estou grato a vocês pela ajuda. 🙏</li>
+    <li>Ele está alheio a tudo que acontece. 🤷‍♂️</li>
+    <li>O problema ficou fácil de resolver. ✔️</li>
+  </ul>
+
+  <h2>Por que a Regência Nominal é importante? 🎯</h2>
+  <ul>
+    <li>Ajuda a construir frases corretas e claras.</li>
+    <li>Evita erros comuns na escrita e na fala.</li>
+    <li>Garante que a relação entre as palavras seja entendida corretamente.</li>
+    <li>É essencial para uma comunicação formal e adequada.</li>
+  </ul>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script>
+    const btn = document.getElementById('toggle-theme');
+    const icon = btn.querySelector('i');
+
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-theme');
+      icon.className = 'fas fa-sun';
+    } else {
+      icon.className = 'fas fa-moon';
+    }
+
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('dark-mode', 'enabled');
+        icon.className = 'fas fa-sun';
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+        icon.className = 'fas fa-moon';
+      }
+    });
+  </script>
+
+</body>
+</html>

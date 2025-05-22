@@ -6,25 +6,101 @@ const materias = [
     url: "portugues/Classes Gramaticais.html"
   },
   {
-    titulo: "substantivo",
-    descricao: "Resumo dos tipos de substantivo",
+    titulo: "Substantivo",
+    descricao: "Resumo dos tipos de substantivo.",
     url: "portugues/substantivo.html"
   },
   {
-    titulo: "Ciências",
-    descricao: "Resumo dos conteúdos de física, química e biologia.",
-    url: "ciencias/ciencias.html"
+    titulo: "Verbo",
+    descricao: "Resumo sobre o verbo e tipos de verbo.",
+    url: "portugues/verbos.html"
   },
   {
-    titulo: "História",
-    descricao: "Resumo sobre história do Brasil e do mundo.",
-    url: "historia/historia.html"
+    titulo: "Conjugação Verbal",
+    descricao: "Resumo sobre Conjugação Verbal.",
+    url: "portugues/Conjugação Verbal.html"
   },
   {
-    titulo: "Geografia",
-    descricao: "Resumo de geografia física e humana.",
-    url: "geografia/geografia.html"
-  }
+    titulo: "Flexão na Língua Portuguesa",
+    descricao: "Resumo de Flexão na Língua Portuguesa.",
+    url: "portugues/Flexão na Língua Portuguesa.html"
+  },
+  {
+    titulo: "Análise Sintática",
+    descricao: "Resumo sobre Análise Sintática.",
+    url: "portugues/Análise Sintática.html"
+  },
+  {
+    titulo: "Frase",
+    descricao: "Resumo sobre Frase.",
+    url: "portugues/Frase.html"
+  },
+  {
+    titulo: "Concordância Verbal",
+    descricao: "Resumo sobre Concordância Verbal.",
+    url: "portugues/Concordância Verbal.html"
+  },
+  {
+    titulo: "Concordância Nominal",
+    descricao: "Resumo sobre Concordância Nominal.",
+    url: "portugues/Concordância Nominal.html"
+  },
+  {
+    titulo: "Regência Verbal",
+    descricao: "Resumo sobre Regência Verbal.",
+    url: "portugues/Regência Verbal.html"
+  },
+  {
+    titulo: "Regência Nominal",
+    descricao: "Resumo sobre Regência Nominal.",
+    url: "portugues/Regência Nominal.html"
+  },
+  {
+    titulo: "Crase",
+    descricao: "Resumo sobre Crase.",
+    url: "portugues/Crase.html"
+  },
+  {
+    titulo: "Semântica",
+    descricao: "Resumo sobre Semântica.",
+    url: "portugues/Semântica.html"
+    
+  },
+  {
+    titulo: "",
+    descricao: "Resumo sobre .",
+    url: "portugues/.html"
+  },
+  {
+    titulo: "",
+    descricao: "Resumo sobre .",
+    url: "portugues/.html"
+  },
+  {
+    titulo: "",
+    descricao: "Resumo sobre .",
+    url: "portugues/.html"
+  },
+  {
+    titulo: "",
+    descricao: "Resumo sobre .",
+    url: "portugues/.html"
+  },
+  {
+    titulo: "",
+    descricao: "Resumo sobre .",
+    url: "portugues/.html"
+  },
+  {
+    titulo: "",
+    descricao: "Resumo sobre .",
+    url: "portugues/.html"
+  },
+  {
+    titulo: "",
+    descricao: "Resumo sobre .",
+    url: "portugues/.html"
+  },
 ];
 
 // Configurações do Fuse.js

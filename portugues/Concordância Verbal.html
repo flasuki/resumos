@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Concordância Verbal</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
+    }
+    strong {
+      color: #289e6c;
+    }
+    .exemplo {
+      font-style: italic;
+      color: #555;
+      margin-left: 1.5rem;
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão tema -->
+  <button id="toggle-theme" aria-label="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Botão voltar -->
+  <a href="../index.html" class="back-btn" aria-label="Voltar para página principal">
+    ← Voltar para Matérias
+  </a>
+
+  <h1>Concordância Verbal 🤝✨</h1>
+
+  <p>A concordância verbal é quando o verbo combina certinho com o sujeito da frase em número (singular/plural) e pessoa (1ª, 2ª ou 3ª) 👤➕.</p>
+
+  <h2>Regras principais:</h2>
+  <ul>
+    <li>
+      <strong>Sujeito singular → verbo no singular</strong>
+      <span class="exemplo">Exemplo: A menina estuda. 👧📖</span>
+    </li>
+    <li>
+      <strong>Sujeito plural → verbo no plural</strong>
+      <span class="exemplo">Exemplo: Os meninos brincam. 🧒🧒⚽</span>
+    </li>
+    <li>
+      <strong>Sujeito composto → verbo no plural</strong>
+      <span class="exemplo">Exemplo: João e Maria chegaram. 👦👧🚶‍♂️🚶‍♀️</span>
+    </li>
+    <li>
+      <strong>Sujeito composto depois do verbo → verbo pode concordar com o mais próximo ou ir para o plural</strong>
+      <span class="exemplo">
+        Exemplo:<br />
+        Chegou o professor e os alunos. 👨‍🏫👩‍🎓<br />
+        Chegaram o professor e os alunos. 👨‍🏫👩‍🎓
+      </span>
+    </li>
+    <li>
+      <strong>Pronomes de tratamento → verbo na 3ª pessoa</strong>
+      <span class="exemplo">Exemplo: O senhor está certo. 🎩</span>
+    </li>
+    <li>
+      <strong>Verbos impessoais → sempre na 3ª pessoa do singular</strong>
+      <span class="exemplo">Exemplo: Choveu muito ontem. ☔️🌧️</span>
+    </li>
+  </ul>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script>
+    const btn = document.getElementById('toggle-theme');
+    const icon = btn.querySelector('i');
+
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-theme');
+      icon.className = 'fas fa-sun';
+    } else {
+      icon.className = 'fas fa-moon';
+    }
+
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('dark-mode', 'enabled');
+        icon.className = 'fas fa-sun';
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+        icon.className = 'fas fa-moon';
+      }
+    });
+  </script>
+
+</body>
+</html>

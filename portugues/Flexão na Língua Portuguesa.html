@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flexão na Língua Portuguesa📚</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Estilos extras para listas */
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
+    }
+    .exemplo {
+      font-style: italic;
+      color: #555;
+      margin-left: 1.5rem;
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão tema -->
+  <button id="toggle-theme" aria-label="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Botão voltar -->
+  <a href="../index.html" class="back-btn" aria-label="Voltar para página principal">
+    ← Voltar para Matérias
+  </a>
+
+  <h1>O que é Flexão? 🔄</h1>
+
+  <p>A flexão é a modificação que as palavras sofrem para expressar diferentes informações gramaticais, como:</p>
+
+  <ul>
+    <li><strong>Gênero</strong> (masculino ou feminino) 👦👧</li>
+    <li><strong>Número</strong> (singular ou plural) 1️⃣➕</li>
+    <li><strong>Pessoa</strong> (1ª, 2ª ou 3ª pessoa) 👤👥</li>
+    <li><strong>Tempo</strong> (presente, passado, futuro) ⏳</li>
+    <li><strong>Modo</strong> (indicativo, subjuntivo, imperativo) 🎭</li>
+    <li><strong>Voz</strong> (ativa, passiva, reflexiva) 🔄</li>
+  </ul>
+
+  <p>Ou seja, a flexão é o jeito que a palavra muda para mostrar essas características e deixar a frase correta e clara.</p>
+
+  <h2>Tipos de Flexão no Português 🇧🇷</h2>
+
+  <ol>
+    <li>
+      <strong>Flexão Nominal 🏷️</strong><br />
+      Afeta os substantivos, adjetivos, pronomes e numerais, mudando:
+      <p class="exemplo">Gênero: moço (masculino) / moça (feminino)</p>
+      <p class="exemplo">Número: moço (singular) / moços (plural)</p>
+    </li>
+    <li>
+      <strong>Flexão Verbal 🏃‍♂️</strong><br />
+      Modifica os verbos para indicar:
+      <p class="exemplo">Pessoa e número: eu canto / nós cantamos</p>
+      <p class="exemplo">Tempo: canto (presente) / cantei (passado) / cantarei (futuro)</p>
+      <p class="exemplo">Modo: indicativo (fato), subjuntivo (dúvida), imperativo (ordem)</p>
+      <p class="exemplo">Voz: ativa, passiva, reflexiva</p>
+    </li>
+    <li>
+      <strong>Flexão Pronominal 👤</strong><br />
+      Afeta os pronomes, que mudam conforme:
+      <p class="exemplo">Pessoa: eu, tu, ele</p>
+      <p class="exemplo">Número: eu (singular), nós (plural)</p>
+      <p class="exemplo">Caso: sujeito (eu), objeto (me)</p>
+    </li>
+  </ol>
+
+  <h2>Por que a flexão é importante? 🤔</h2>
+
+  <p>Sem a flexão, as frases ficariam confusas e sem sentido, porque não saberíamos quem faz a ação, quando ela acontece ou a quem ela se refere. A flexão garante que a comunicação seja clara, correta e precisa.</p>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script>
+    const btn = document.getElementById('toggle-theme');
+    const icon = btn.querySelector('i');
+
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-theme');
+      icon.className = 'fas fa-sun';
+    } else {
+      icon.className = 'fas fa-moon';
+    }
+
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('dark-mode', 'enabled');
+        icon.className = 'fas fa-sun';
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+        icon.className = 'fas fa-moon';
+      }
+    });
+  </script>
+
+</body>
+</html>

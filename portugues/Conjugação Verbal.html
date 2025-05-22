@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conjugação Verbal📚</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Estilos adicionais para tabelas */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+    th, td {
+      border: 1px solid #3bb77e;
+      padding: 0.6rem 1rem;
+      text-align: center;
+    }
+    th {
+      background-color: #3bb77e;
+      color: white;
+    }
+    caption {
+      caption-side: top;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #289e6c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão tema -->
+  <button id="toggle-theme" aria-label="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Botão voltar -->
+  <a href="../index.html" class="back-btn" aria-label="Voltar para página principal">
+    ← Voltar para Matérias
+  </a>
+
+  <h1>O que é Conjugação Verbal? 🎭</h1>
+
+  <p><strong>Conjugação verbal</strong> é o conjunto de todas as formas que um verbo pode assumir, variando conforme:</p>
+
+  <ul>
+    <li><strong>Pessoa</strong> (1ª, 2ª ou 3ª pessoa) 👤</li>
+    <li><strong>Número</strong> (singular ou plural) 🔢</li>
+    <li><strong>Tempo</strong> (passado, presente, futuro) ⏳</li>
+    <li><strong>Modo</strong> (indicativo, subjuntivo, imperativo) 🎭</li>
+    <li><strong>Voz</strong> (ativa, passiva, reflexiva) 🔄</li>
+  </ul>
+
+  <p>Ou seja, é a forma organizada de mostrar todas as flexões que o verbo pode ter para expressar diferentes sentidos.</p>
+
+  <h2>As 3 Conjugações Verbais no Português 🇧🇷</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Conjugação</th>
+        <th>Terminação dos verbos</th>
+        <th>Exemplos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1ª conjugação</strong></td>
+        <td>-ar</td>
+        <td>cantar, falar, brincar</td>
+      </tr>
+      <tr>
+        <td><strong>2ª conjugação</strong></td>
+        <td>-er</td>
+        <td>vender, correr, ler</td>
+      </tr>
+      <tr>
+        <td><strong>3ª conjugação</strong></td>
+        <td>-ir</td>
+        <td>partir, abrir, dividir</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Exemplos de Conjugação no Presente do Indicativo 🕒</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Pessoa</th>
+        <th>Cantar (1ª)</th>
+        <th>Vender (2ª)</th>
+        <th>Partir (3ª)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Eu (1ª singular)</td><td>canto</td><td>vendo</td><td>parto</td></tr>
+      <tr><td>Tu (2ª singular)</td><td>cantas</td><td>vendes</td><td>partes</td></tr>
+      <tr><td>Ele/Ela (3ª sing.)</td><td>canta</td><td>vende</td><td>parte</td></tr>
+      <tr><td>Nós (1ª plural)</td><td>cantamos</td><td>vendemos</td><td>partimos</td></tr>
+      <tr><td>Vós (2ª plural)</td><td>cantais</td><td>vendeis</td><td>partis</td></tr>
+      <tr><td>Eles/Elas (3ª pl.)</td><td>cantam</td><td>vendem</td><td>partem</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Modos Verbais Principais 🎭</h2>
+
+  <ul>
+    <li><strong>Indicativo:</strong> expressa fatos reais.</li>
+    <li><strong>Subjuntivo:</strong> expressa dúvida, desejo ou hipótese.</li>
+    <li><strong>Imperativo:</strong> expressa ordem, pedido ou conselho.</li>
+  </ul>
+
+  <p>Além disso, os verbos têm formas nominais:</p>
+
+  <ul>
+    <li><strong>Infinitivo:</strong> cantar, vender, partir</li>
+    <li><strong>Gerúndio:</strong> cantando, vendendo, partindo</li>
+    <li><strong>Particípio:</strong> cantado, vendido, partido</li>
+  </ul>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script>
+    const btn = document.getElementById('toggle-theme');
+    const icon = btn.querySelector('i');
+
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-theme');
+      icon.className = 'fas fa-sun';
+    } else {
+      icon.className = 'fas fa-moon';
+    }
+
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('dark-mode', 'enabled');
+        icon.className = 'fas fa-sun';
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+        icon.className = 'fas fa-moon';
+      }
+    });
+  </script>
+
+</body>
+</html>

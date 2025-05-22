@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verbo📚</title>
+  <link rel="stylesheet" href="../stilo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      background-color: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-theme {
+      background-color: #121212;
+      color: #eee;
+    }
+    h1 {
+      text-align: center;
+      color: #3bb77e;
+      margin-bottom: 1rem;
+      font-size: 2.8rem;
+    }
+    h2 {
+      color: #289e6c;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 3px solid #3bb77e;
+      padding-bottom: 0.3rem;
+      font-size: 1.8rem;
+    }
+    p {
+      margin: 0.3rem 0 1rem 0;
+      font-size: 1.1rem;
+    }
+    ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .exemplo {
+      font-style: italic;
+      color: #555;
+      margin-left: 1rem;
+      margin-top: 0.2rem;
+    }
+    a.back-btn {
+      display: inline-block;
+      margin-bottom: 2rem;
+      padding: 0.5rem 1rem;
+      background-color: #3bb77e;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    a.back-btn:hover {
+      background-color: #289e6c;
+    }
+    /* Botão tema */
+    #toggle-theme {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: inherit;
+      z-index: 1000;
+      transition: color 0.3s;
+    }
+    #toggle-theme:hover {
+      color: #3bb77e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão tema -->
+  <button id="toggle-theme" aria-label="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Botão voltar -->
+  <a href="../index.html" class="back-btn" aria-label="Voltar para página principal">
+    ← Voltar para Matérias
+  </a>
+
+  <h1>Verbos 🏃‍♂️⏳</h1>
+
+  <p>Os verbos são palavras que indicam ação, estado ou fenômeno da natureza. Eles são essenciais para formar frases e expressar o que acontece, como acontece ou o que é.</p>
+
+  <h2>Tipos de Verbos na Língua Portuguesa 📝</h2>
+
+  <ol>
+    <li>
+      <strong>Verbos Regulares 🔄</strong><br />
+      Mantêm o radical igual em todas as conjugações.<br />
+      <span class="exemplo">Exemplo: cantar → canto, cantas, cantou.</span>
+    </li>
+    <li>
+      <strong>Verbos Irregulares ❌</strong><br />
+      Sofrem alterações no radical ou nas terminações durante a conjugação.<br />
+      <span class="exemplo">Exemplo: ouvir → ouço, ouves, ouviu.</span>
+    </li>
+    <li>
+      <strong>Verbos Anômalos 🔀</strong><br />
+      Apresentam mais de um radical na conjugação, com mudanças profundas.<br />
+      <span class="exemplo">Exemplo: ser (sou, fui, era), ir (vou, fui, ia).</span>
+    </li>
+    <li>
+      <strong>Verbos Defectivos 🚫</strong><br />
+      Não são conjugados em todas as pessoas, tempos ou modos.<br />
+      <span class="exemplo">Exemplo: abolir, reaver (não têm todas as formas).</span>
+    </li>
+    <li>
+      <strong>Verbos Abundantes ➕</strong><br />
+      Possuem duas ou mais formas equivalentes, especialmente no particípio.<br />
+      <span class="exemplo">Exemplo: aceitar → aceitado / aceito; fritar → fritado / frito.</span>
+    </li>
+    <li>
+      <strong>Verbos Impessoais 🌪️</strong><br />
+      Só são conjugados na 3ª pessoa do singular, geralmente indicando fenômenos da natureza ou existência.<br />
+      <span class="exemplo">Exemplo: chover, nevar, haver (no sentido de existir).</span>
+    </li>
+    <li>
+      <strong>Verbos Unipessoais 👤</strong><br />
+      Também conjugados apenas na 3ª pessoa, relacionados a ações que só um sujeito pode praticar.<br />
+      <span class="exemplo">Exemplo: verbos que indicam vozes de animais ou sujeitos oracionais.</span>
+    </li>
+    <li>
+      <strong>Verbos Pronominais 🤳</strong><br />
+      São verbos que se conjugam acompanhados de pronomes oblíquos átonos, indicando ação reflexiva, recíproca ou que ocorre por si mesma.<br />
+      <span class="exemplo">Exemplo: queixar-se, arrepender-se, queimar-se.</span>
+    </li>
+    <li>
+      <strong>Verbos Principais ⭐</strong><br />
+      Verbos que expressam a ação principal da oração, sem depender de outro verbo para sentido completo.<br />
+      <span class="exemplo">Exemplo: correr, falar, comer.</span>
+    </li>
+    <li>
+      <strong>Verbos Auxiliares ⚙️</strong><br />
+      Verbos que acompanham o verbo principal para formar tempos compostos, vozes passivas, etc.<br />
+      <span class="exemplo">Exemplo: ter, estar, haver (quando usados para formar tempos compostos).</span>
+    </li>
+    <li>
+      <strong>Verbos Transitivos ➡️</strong><br />
+      Precisam de complemento para completar o sentido.<br />
+      Direto: sem preposição (ex: ler um livro).<br />
+      Indireto: com preposição (ex: gostar de música).<br />
+      Direto e Indireto: ambos (ex: dar um presente para alguém).
+    </li>
+    <li>
+      <strong>Verbos Intransitivos 🚶‍♂️</strong><br />
+      Não precisam de complemento, seu sentido é completo sozinho.<br />
+      <span class="exemplo">Exemplo: correr, chegar, dormir.</span>
+    </li>
+    <li>
+      <strong>Verbos de Ligação 🔗</strong><br />
+      Não indicam ação, apenas ligam o sujeito a uma característica ou estado.<br />
+      <span class="exemplo">Exemplo: ser, estar, parecer.</span>
+    </li>
+  </ol>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script>
+    const btn = document.getElementById('toggle-theme');
+    const icon = btn.querySelector('i');
+
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-theme');
+      icon.className = 'fas fa-sun';
+    } else {
+      icon.className = 'fas fa-moon';
+    }
+
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('dark-mode', 'enabled');
+        icon.className = 'fas fa-sun';
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+        icon.className = 'fas fa-moon';
+      }
+    });
+  </script>
+
+</body>
+</html>

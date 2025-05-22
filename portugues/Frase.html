@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frase</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
+    }
+    strong {
+      color: #289e6c;
+    }
+    .exemplo {
+      font-style: italic;
+      color: #555;
+      margin-left: 1.5rem;
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão tema -->
+  <button id="toggle-theme" aria-label="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Botão voltar -->
+  <a href="../index.html" class="back-btn" aria-label="Voltar para página principal">
+    ← Voltar para Matérias
+  </a>
+
+  <h1>O que é Frase? 📝</h1>
+
+  <p>Uma frase é um conjunto de palavras que transmite uma ideia completa, um pensamento, um sentimento ou uma informação. Ela pode ser curta ou longa, mas sempre tem sentido para quem a lê ou ouve.</p>
+
+  <h2>Características da Frase 📌</h2>
+  <ul>
+    <li>Pode conter um ou mais termos (palavras).</li>
+    <li>Pode ter um verbo (oração) ou não ter verbo (frase nominal).</li>
+    <li>Sempre transmite uma mensagem completa, mesmo que seja curta.</li>
+  </ul>
+
+  <h2>Tipos de Frases 📝</h2>
+
+  <h3>1. Quanto à Intenção do Falante 🎯</h3>
+  <ul>
+    <li>
+      <strong>Frase Declarativa 🗣️</strong><br />
+      Expressa uma informação, uma afirmação ou negação.
+      <span class="exemplo">Exemplo: "Eu gosto de estudar." / "Não gosto de chuva."</span>
+    </li>
+    <li>
+      <strong>Frase Interrogativa ❓</strong><br />
+      Expressa uma pergunta.
+      <span class="exemplo">Exemplo: "Você vai à escola hoje?" / "Quando começa a aula?"</span>
+    </li>
+    <li>
+      <strong>Frase Imperativa ⚠️</strong><br />
+      Expressa ordem, pedido, conselho ou súplica.
+      <span class="exemplo">Exemplo: "Estude para a prova!" / "Por favor, me ajude."</span>
+    </li>
+    <li>
+      <strong>Frase Exclamativa 😲</strong><br />
+      Expressa emoção, surpresa, alegria, tristeza, etc.
+      <span class="exemplo">Exemplo: "Que dia lindo!" / "Nossa, que susto!"</span>
+    </li>
+    <li>
+      <strong>Frase Optativa 🙏✨</strong><br />
+      Expressa desejo, voto, bênção ou esperança. Geralmente usa verbos no subjuntivo e termina com ponto de exclamação.
+      <span class="exemplo">Exemplo: "Que você seja feliz!" / "Boa sorte!" / "Tenha um ótimo dia!"</span>
+    </li>
+  </ul>
+
+  <h3>2. Quanto à Estrutura 🏗️</h3>
+  <ul>
+    <li>
+      <strong>Frase Simples</strong><br />
+      Contém apenas uma oração (um verbo ou locução verbal).
+      <span class="exemplo">Exemplo: "Eu estudo todos os dias."</span>
+    </li>
+    <li>
+      <strong>Frase Composta</strong><br />
+      Contém duas ou mais orações (mais de um verbo).
+      <span class="exemplo">Exemplo: "Eu estudo e meu irmão joga futebol."</span>
+    </li>
+  </ul>
+
+  <h3>3. Quanto à Natureza do Predicado ⚙️</h3>
+  <ul>
+    <li>
+      <strong>Frase Nominal</strong><br />
+      Não tem verbo, geralmente expressa uma ideia ou sentimento.
+      <span class="exemplo">Exemplo: "Que dia maravilhoso!" / "Silêncio!"</span>
+    </li>
+  </ul>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script>
+    const btn = document.getElementById('toggle-theme');
+    const icon = btn.querySelector('i');
+
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-theme');
+      icon.className = 'fas fa-sun';
+    } else {
+      icon.className = 'fas fa-moon';
+    }
+
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('dark-mode', 'enabled');
+        icon.className = 'fas fa-sun';
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+        icon.className = 'fas fa-moon';
+      }
+    });
+  </script>
+
+</body>
+</html>

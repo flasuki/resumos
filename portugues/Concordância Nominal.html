@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Concordância Nominal</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
+    }
+    strong {
+      color: #289e6c;
+    }
+    .exemplo {
+      font-style: italic;
+      color: #555;
+      margin-left: 1.5rem;
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão tema -->
+  <button id="toggle-theme" aria-label="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Botão voltar -->
+  <a href="../index.html" class="back-btn" aria-label="Voltar para página principal">
+    ← Voltar para Matérias
+  </a>
+
+  <h1>Concordância Nominal 🤝📏</h1>
+
+  <p>A concordância nominal é a relação de harmonia que ocorre entre o substantivo e os seus determinantes ou modificadores, como:</p>
+  <ul>
+    <li>Artigos (o, a, os, as)</li>
+    <li>Adjetivos (bonito, feliz, grande)</li>
+    <li>Pronomes (este, aquele, minha)</li>
+    <li>Numerais (dois, três, primeiro)</li>
+    <li>Particípios (preso, amado)</li>
+  </ul>
+  <p>Essa relação exige que essas palavras concordem em gênero (masculino ou feminino) e número (singular ou plural) com o substantivo a que se referem.</p>
+
+  <h2>Regras Básicas da Concordância Nominal 📋</h2>
+  <ol>
+    <li>
+      <strong>Concordância entre adjetivo e substantivo</strong><br />
+      O adjetivo deve concordar em gênero e número com o substantivo.
+      <span class="exemplo">
+        Exemplo:<br />
+        O livro interessante (masculino singular)<br />
+        As casas bonitas (feminino plural)
+      </span>
+    </li>
+    <li>
+      <strong>Concordância com mais de um substantivo de gêneros diferentes</strong><br />
+      Quando o adjetivo vem depois de dois ou mais substantivos de gêneros diferentes, ele pode concordar:
+      <ul>
+        <li>No masculino plural (forma mais comum)</li>
+        <li>Ou com o substantivo mais próximo</li>
+      </ul>
+      <span class="exemplo">
+        Exemplo:<br />
+        O livro e a revista interessantes (masculino plural)<br />
+        O livro e a revista interessante (concordando com o mais próximo)
+      </span>
+    </li>
+    <li>
+      <strong>Concordância com mais de um substantivo em números diferentes</strong><br />
+      O adjetivo posposto pode concordar no plural ou com o substantivo mais próximo.
+      <span class="exemplo">
+        Exemplo:<br />
+        A casa e os apartamentos grandes (plural)<br />
+        A casa e os apartamentos grande (singular, concordando com o mais próximo)
+      </span>
+    </li>
+    <li>
+      <strong>Concordância do artigo, pronome e numeral com o substantivo</strong><br />
+      Eles também devem concordar em gênero e número com o substantivo.
+      <span class="exemplo">
+        Exemplo:<br />
+        Estas três obras maravilhosas 📚✨<br />
+        Aquele menino esperto 👦
+      </span>
+    </li>
+  </ol>
+
+  <h2>Exemplos práticos com emojis 📝</h2>
+  <ul>
+    <li>Estas três obras maravilhosas estavam esquecidas na biblioteca. 📚✨</li>
+    <li>O menino feliz brinca no parque. 👦😊</li>
+    <li>As flores coloridas são lindas. 🌸🌼</li>
+    <li>O livro e a revista interessantes foram vendidos. 📖📰</li>
+    <li>A casa e os apartamentos grandes foram reformados. 🏠🏢</li>
+  </ul>
+
+  <h2>Por que a concordância nominal é importante? 🎯</h2>
+  <ul>
+    <li>Garante que a frase tenha sentido e seja clara.</li>
+    <li>Evita erros gramaticais que podem confundir o leitor.</li>
+    <li>Ajuda a deixar a comunicação mais correta e elegante.</li>
+  </ul>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script>
+    const btn = document.getElementById('toggle-theme');
+    const icon = btn.querySelector('i');
+
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-theme');
+      icon.className = 'fas fa-sun';
+    } else {
+      icon.className = 'fas fa-moon';
+    }
+
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('dark-mode', 'enabled');
+        icon.className = 'fas fa-sun';
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+        icon.className = 'fas fa-moon';
+      }
+    });
+  </script>
+
+</body>
+</html>

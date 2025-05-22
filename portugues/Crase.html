@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crase</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
+    }
+    strong {
+      color: #289e6c;
+    }
+    .exemplo {
+      font-style: italic;
+      color: #555;
+      margin-left: 1.5rem;
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .dica {
+      background-color: #e6f0ff;
+      border-left: 5px solid #3bb77e;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0;
+      font-style: normal;
+      color: #222;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão tema -->
+  <button id="toggle-theme" aria-label="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Botão voltar -->
+  <a href="../index.html" class="back-btn" aria-label="Voltar para página principal">
+    ← Voltar para Matérias
+  </a>
+
+  <h1>Crase? à ➡️ 🔗</h1>
+
+  <p>A crase é a fusão da preposição <strong>"a"</strong> com o artigo feminino <strong>"a"</strong> ou com a vogal inicial de pronomes demonstrativos. Essa fusão é representada pelo acento grave (<strong>à</strong>).</p>
+
+  <h2>Quando usar a crase? 🤔</h2>
+  <ol>
+    <li>
+      <strong>Preposição "a" + artigo feminino "a" ou "as"</strong>
+      <span class="exemplo">
+        Exemplo: Vou à escola. (Vou a + a escola) 🏫<br />
+        Exemplo: Entreguei o livro às professoras. (Entreguei o livro a + as professoras) 👩‍🏫👩‍🏫
+      </span>
+    </li>
+    <li>
+      <strong>Preposição "a" + pronomes demonstrativos que começam com "a"</strong>
+      <span class="exemplo">
+        Exemplo: Refiro-me àquela situação. (a + aquela) 📌
+      </span>
+    </li>
+    <li>
+      <strong>Locuções prepositivas, locuções conjuntivas e locuções adverbiais femininas</strong>
+      <span class="exemplo">
+        Exemplo: Chegou à tarde. (locução adverbial feminina) 🌇<br />
+        Exemplo: À medida que estudamos, aprendemos mais. 📚
+      </span>
+    </li>
+  </ol>
+
+  <h2>Como saber se usa crase? ✔️</h2>
+  <p>Substitua a palavra feminina por uma masculina equivalente.</p>
+  <p>Se aparecer <strong>"ao"</strong> (preposição a + artigo o), usa crase na feminina.</p>
+  <span class="exemplo">Exemplo: Vou ao mercado → Vou à feira.</span>
+  <p>Só há crase antes de palavras femininas que aceitam o artigo "a".</p>
+  <p>Não se usa crase antes de palavras masculinas, verbos, pronomes pessoais, nomes de cidade que não usam artigo, etc.</p>
+
+  <h2>Exemplos sem crase ❌</h2>
+  <ul>
+    <li>Vou a pé. (sem artigo) 🚶‍♂️</li>
+    <li>Gosto de viajar a trabalho. (sem artigo) 💼</li>
+    <li>Entreguei o presente a você. (pronome pessoal, sem crase) 🎁</li>
+  </ul>
+
+  <div class="dica">
+    <strong>Dicas importantes! 💡</strong>
+    <ul>
+      <li>Não se usa crase antes de palavras masculinas.</li>
+      <li>Não se usa crase antes de verbos.</li>
+      <li>Atenção ao uso antes de pronomes possessivos femininos (ex: a minha), que geralmente não levam crase.</li>
+      <li>Use crase em expressões femininas que indicam horas: Chegarei às 8 horas. ⏰</li>
+    </ul>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script>
+    const btn = document.getElementById('toggle-theme');
+    const icon = btn.querySelector('i');
+
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-theme');
+      icon.className = 'fas fa-sun';
+    } else {
+      icon.className = 'fas fa-moon';
+    }
+
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('dark-mode', 'enabled');
+        icon.className = 'fas fa-sun';
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+        icon.className = 'fas fa-moon';
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Regência Verbal</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
+    }
+    strong {
+      color: #289e6c;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+    th, td {
+      border: 1px solid #3bb77e;
+      padding: 0.6rem 1rem;
+      text-align: left;
+    }
+    th {
+      background-color: #3bb77e;
+      color: white;
+    }
+    caption {
+      caption-side: top;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #289e6c;
+    }
+    .exemplo {
+      font-style: italic;
+      color: #555;
+      margin-left: 1.5rem;
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão tema -->
+  <button id="toggle-theme" aria-label="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Botão voltar -->
+  <a href="../index.html" class="back-btn" aria-label="Voltar para página principal">
+    ← Voltar para Matérias
+  </a>
+
+  <h1>Regência Verbal 🤔🔗</h1>
+
+  <p>A regência verbal é a parte da gramática que estuda a relação entre o verbo (termo regente) e os seus complementos (termos regidos), ou seja, como o verbo se liga a outras palavras para completar seu sentido.</p>
+
+  <p>Essa ligação pode ocorrer:</p>
+  <ul>
+    <li>Sem preposição (objeto direto)</li>
+    <li>Com preposição (objeto indireto ou adjunto adverbial)</li>
+  </ul>
+
+  <h2>Como funciona a Regência Verbal? ⚙️</h2>
+
+  <p>Alguns verbos exigem complemento sem preposição (transitivo direto).</p>
+  <p>Outros exigem complemento com preposição (transitivo indireto).</p>
+  <p>Alguns verbos podem ter dois complementos: um direto e outro indireto (transitivo direto e indireto).</p>
+  <p>Outros verbos não exigem complemento (intransitivos).</p>
+
+  <h2>Exemplos de Regência Verbal 📝</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Verbo</th>
+        <th>Complemento sem preposição (objeto direto)</th>
+        <th>Complemento com preposição (objeto indireto)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Assistir</td>
+        <td>Assistir um filme.</td>
+        <td>Assistir a um filme.</td>
+      </tr>
+      <tr>
+        <td>Gostar</td>
+        <td>—</td>
+        <td>Gostar de música.</td>
+      </tr>
+      <tr>
+        <td>Chegar</td>
+        <td>—</td>
+        <td>Chegar a casa.</td>
+      </tr>
+      <tr>
+        <td>Ajudar</td>
+        <td>Ajudar o amigo.</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Verbos que exigem preposição comum 📌</h2>
+  <ul>
+    <li>Abster-se de</li>
+    <li>Acreditar em</li>
+    <li>Gostar de</li>
+    <li>Precisar de</li>
+    <li>Obedecer a</li>
+    <li>Assistir a</li>
+    <li>Chegar a</li>
+    <li>Responder a</li>
+    <li>Preferir a</li>
+    <li>Lembrar de</li>
+  </ul>
+
+  <h2>Por que a Regência Verbal é importante? 🎯</h2>
+  <ul>
+    <li>Garante que o verbo esteja corretamente ligado aos seus complementos.</li>
+    <li>Evita erros comuns, como usar preposição errada ou esquecer de usá-la.</li>
+    <li>Melhora a clareza e a correção na comunicação.</li>
+  </ul>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script>
+    const btn = document.getElementById('toggle-theme');
+    const icon = btn.querySelector('i');
+
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-theme');
+      icon.className = 'fas fa-sun';
+    } else {
+      icon.className = 'fas fa-moon';
+    }
+
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('dark-mode', 'enabled');
+        icon.className = 'fas fa-sun';
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+        icon.className = 'fas fa-moon';
+      }
+    });
+  </script>
+
+</body>
+</html>
