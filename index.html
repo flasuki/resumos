@@ -3,14 +3,190 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resumos 8º📚</title>
-  <link rel="stylesheet" href="stilo.css" />
+  <title>Resumos📚</title>
+   <link rel="stylesheet" href="stilo.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      margin: 0;
+      padding: 0 1rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .dark-theme {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    /* Botão tema */
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: inherit;
+      transition: color 0.3s;
+      z-index: 1000;
+    }
+    .toggle-btn:hover {
+      color: #007bff;
+    }
+
+    /* Cabeçalho */
+    header {
+      text-align: center;
+      margin: 3rem 0 2rem;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.3rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    .dark-theme header p {
+      color: #bbb;
+    }
+
+    /* Barra de pesquisa */
+    #search-container {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      text-align: center;
+    }
+    #search {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1.1rem;
+      border: 2px solid #007bff;
+      border-radius: 50px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    #search:focus {
+      border-color: #0056b3;
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    }
+
+    /* Resultados da busca */
+    #resultados {
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      list-style: none;
+      padding: 0;
+      color: #007bff;
+    }
+    #resultados li {
+      background: #e6f0ff;
+      margin: 0.5rem 0;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    #resultados li:hover {
+      background-color: #cce0ff;
+    }
+    .dark-theme #resultados li {
+      background: #1e2a47;
+      color: #a8c4ff;
+    }
+    .dark-theme #resultados li:hover {
+      background-color: #3a4f8a;
+    }
+
+    /* Seção matérias */
+    main section {
+      max-width: 900px;
+      margin: 0 auto 4rem;
+    }
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+    .subject-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #007bff;
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgb(0 123 255 / 0.3);
+      transition: background-color 0.3s, transform 0.2s;
+      user-select: none;
+    }
+    .subject-card:hover {
+      background-color: #0056b3;
+      transform: translateY(-4px);
+    }
+    .dark-theme .subject-card {
+      background-color: #3390ff;
+      box-shadow: 0 4px 8px rgb(51 144 255 / 0.5);
+    }
+    .dark-theme .subject-card:hover {
+      background-color: #1a5ec8;
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 0.9rem;
+      color: #555;
+      border-top: 1px solid #ddd;
+      margin-bottom: 1rem;
+    }
+    .dark-theme footer {
+      color: #aaa;
+      border-color: #333;
+    }
+    footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsividade */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      main h2 {
+        font-size: 1.5rem;
+      }
+      .subject-card {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <!-- Botão de tema -->
-  <button id="toggle-theme" class="toggle-btn">
+  <button id="toggle-theme" class="toggle-btn" aria-label="Alternar tema">
     <i class="fas fa-moon"></i>
   </button>
 
@@ -20,19 +196,12 @@
     <p>Estude fácil, rápido e com estilo! 💡</p>
   </header>
 
-  <!-- Seção principal -->
-  <main>
-    <section>
-      <h2>📚 Matérias</h2>
-      <div class="subjects-grid">
-        <a href="matematica/matematica1.html" class="subject-card">➗ Matemática</a>
-        <a href="portugues/portugues1.html" class="subject-card">📝 Português</a>
-        <a href="ciencias/ciencias.html" class="subject-card">🔬 Ciências</a>
-        <a href="historia/historia.html" class="subject-card">🏛️ História</a>
-        <a href="geografia/geografia.html" class="subject-card">🌍 Geografia</a>
-      </div>
-    </section>
-  </main>
+  <!-- Barra de pesquisa -->
+  <div id="search-container">
+    <input type="search" id="search" placeholder="Pesquisar matéria..." aria-label="Pesquisar matéria" autocomplete="off" />
+    <ul id="resultados" role="listbox" aria-live="polite"></ul>
+  </div>
+
 
   <!-- Rodapé -->
   <footer>
@@ -62,5 +231,10 @@
       }
     });
   </script>
+<!-- Fuse.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<!-- Seu script de busca -->
+<script src="busca.js"></script>
+
 </body>
 </html>

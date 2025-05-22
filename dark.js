@@ -18,4 +18,4 @@ btn.addEventListener('click', () => {
     localStorage.setItem('dark-mode', 'disabled');
     icon.className = 'fas fa-moon';
   }
-});
+})
