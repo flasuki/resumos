@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emprego de Certas Palavras Comuns e Dúvidas Frequentes</title>
+  <meta name="description" content="Aprenda o uso correto de palavras comuns que geram dúvidas, como mau/mal, senão/se não, por que/por quê/porque/porquê, há/a, senhor/senhorio, e dicas para evitar erros." />
+  <meta name="keywords" content="mau, mal, senão, se não, por que, por quê, porque, porquê, há, a, senhor, senhorio, dúvidas comuns, português" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    li {
+      margin-bottom: 1rem;
+    }
+    strong {
+      color: #289e6c;
+    }
+    .exemplo {
+      font-style: italic;
+      color: #555;
+      margin-left: 1.5rem;
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .dica {
+      background-color: #e6f0ff;
+      border-left: 5px solid #3bb77e;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0;
+      font-style: normal;
+      color: #222;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão tema -->
+  <button id="toggle-theme" aria-label="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Botão voltar -->
+  <a href="../index.html" class="back-btn" aria-label="Voltar para página principal">
+    ← Voltar para Matérias
+  </a>
+
+  <h1>Emprego de Certas Palavras Comuns e Dúvidas Frequentes 📝</h1>
+
+  <ol>
+    <li>
+      <strong>Mau x Mal</strong><br />
+      Mau = contrário de bom (adjetivo).<br />
+      <span class="exemplo">Exemplo: Ele é um mau aluno. 👎</span>
+      Mal = contrário de bem (advérbio).<br />
+      <span class="exemplo">Exemplo: Ele se saiu mal na prova. 😕</span>
+    </li>
+    <li>
+      <strong>Senão x Se não</strong><br />
+      Senão = caso contrário, exceto, defeito.<br />
+      <span class="exemplo">Exemplo: Estude, senão vai reprovar. ⚠️</span>
+      Se não = conjunção condicional + advérbio de negação.<br />
+      <span class="exemplo">Exemplo: Se não chover, iremos ao parque. ☀️</span>
+    </li>
+    <li>
+      <strong>Por que x Por quê x Porque x Porquê</strong><br />
+      Por que (separado e sem acento) = usado em perguntas (por qual motivo).<br />
+      <span class="exemplo">Exemplo: Por que você não veio? ❓</span>
+      Por quê (separado e com acento) = usado no fim da frase.<br />
+      <span class="exemplo">Exemplo: Você não veio. Por quê? ❓</span>
+      Porque (junto e sem acento) = usado para responder, causa ou explicação.<br />
+      <span class="exemplo">Exemplo: Não fui porque estava doente. 🤒</span>
+      Porquê (junto e com acento) = substantivo, significa “o motivo”.<br />
+      <span class="exemplo">Exemplo: Não entendi o porquê da sua ausência. 🤔</span>
+    </li>
+    <li>
+      <strong>Há x A</strong><br />
+      Há = verbo haver, indica tempo passado.<br />
+      <span class="exemplo">Exemplo: Cheguei aqui há duas horas. ⏰</span>
+      A = preposição que indica tempo futuro ou distância.<br />
+      <span class="exemplo">Exemplo: Chegarei a qualquer momento. ⏳</span>
+    </li>
+    <li>
+      <strong>Senhor x Senhorio</strong><br />
+      Senhor = tratamento de respeito.<br />
+      <span class="exemplo">Exemplo: O senhor chegou cedo. 🎩</span>
+      Senhorio = proprietário de imóvel.<br />
+      <span class="exemplo">Exemplo: O senhorio aumentou o aluguel. 🏠</span>
+    </li>
+    <li>
+      <strong>Trás x Trás (advérbio) x Trás (preposição)</strong><br />
+      Trás (advérbio) = indica lugar atrás.<br />
+      <span class="exemplo">Exemplo: Ele ficou para trás. 👣</span>
+      Trás não é preposição, cuidado para não usar errado.
+    </li>
+    <li>
+      <strong>Senão x Mas</strong><br />
+      Senão = exceto, caso contrário.<br />
+      <span class="exemplo">Exemplo: Não tenho outra escolha, senão aceitar.</span><br />
+      Mas = porém, entretanto.<br />
+      <span class="exemplo">Exemplo: Queria ir, mas estou cansado.</span>
+    </li>
+  </ol>
+
+  <div class="dica">
+    <strong>Dicas para evitar erros! 💡</strong>
+    <ul>
+      <li>Preste atenção ao contexto para escolher a palavra correta.</li>
+      <li>Use a substituição por sinônimos para testar o sentido (ex: “porque” pode virar “pois”).</li>
+      <li>Consulte sempre um dicionário ou gramática confiável quando tiver dúvida.</li>
+    </ul>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script>
+    const btn = document.getElementById('toggle-theme');
+    const icon = btn.querySelector('i');
+
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-theme');
+      icon.className = 'fas fa-sun';
+    } else {
+      icon.className = 'fas fa-moon';
+    }
+
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('dark-mode', 'enabled');
+        icon.className = 'fas fa-sun';
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+        icon.className = 'fas fa-moon';
+      }
+    });
+  </script>
+
+</body>
+</html>
