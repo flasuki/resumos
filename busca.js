@@ -79,12 +79,58 @@ const materias = [
   titulo: "Pontuação",
   descricao: "Aprenda o que é pontuação, seus principais sinais como ponto final, vírgula, dois pontos, ponto e vírgula, reticências, aspas, travessão e mais, com exemplos claros e dicas para usar corretamente.",
   url: "portugues/Pontuacao.html"
+},
+{
+  titulo: "Gêneros Jornalísticos",
+  descricao: "Conheça os principais generos jornalísticos: informativos, interpretativos, opinativos e de entretenimento. Saiba a estrutura da notícia e a função do jornalista na redação clara e objetiva.",
+  url: "portugues/Gêneros jornalísticos.html"
+},
+{
+  titulo: "Tipos Textuais",
+  descricao: "Aprenda os principais tipos textuais: descritivo, narrativo, dissertativo, injuntivo e expositivo, com exemplos, características e estrutura para facilitar o estudo.",
+  url: "portugues/Tipos Textuais.html"
+},
+{
+  titulo: "Texto Dissertativo-Argumentativo e Dissertativo-Expositivo",
+  descricao: "Aprenda a estrutura, características e exemplos dos textos dissertativo-argumentativo e dissertativo-expositivo, tipos textuais muito cobrados em provas e vestibulares.",
+  url: "portugues/Texto Dissertativo.html"
+},
+{
+  titulo: "Progressão Textual",
+  descricao: "Aprenda o que é progressão textual, os pilares coerência e coesão, e como garantir que seu texto avance de forma lógica, clara e organizada.",
+  url: "portugues/prograsao textual.html"
+},
+{
+  titulo: "Intertextualidade",
+  descricao: "Saiba o que é intertextualidade, seus tipos como citação, paráfrase, paródia e alusão, suas funções e exemplos em textos, filmes, memes e mais.",
+  url: "portugues/Intertextualidade.html"
+},
+{
+  titulo: "Estrutura da Notícia – Pirâmide Invertida",
+  descricao: "Aprenda a estrutura da notícia segundo o modelo da pirâmide invertida, suas partes principais e vantagens para o jornalismo e leitura rápida.",
+  url: "portugues/Estrutura da Notícia.html"
+},
+{
+  titulo: "Coerência e Coesão",
+  descricao: "Entenda os conceitos de coerência e coesão, essenciais para a produção de textos claros, organizados e com ideias bem conectadas.",
+  url: "portugues/Coerência e Coesão.html"
+},
+{
+  titulo: "Clareza, Concisão e Estilo",
+  descricao: "Aprenda a escrever textos claros, concisos e com estilo próprio para uma comunicação eficaz e direta.",
+  url: "portugues/Clareza, Concisão e Estilo.html"
+},
+{
+  titulo: "Norma Culta vs Norma Popular ",
+  descricao: "Conheça as diferenças entre norma culta e norma popular, seus contextos de uso, características e a importância do respeito à diversidade linguística.",
+  url: "portugues/Norma Culta vs Norma Popular.html"
+},
+{
+  titulo: "Funções da Linguagem ",
+  descricao: "Conheça as 6 principais funções da linguagem, seus focos, objetivos e exemplos para entender melhor a comunicação.",
+  url: "portugues/Funções da Linguagem.html"
 }
 
-
-
-
-  
 ];
 
 // Configurações do Fuse.js

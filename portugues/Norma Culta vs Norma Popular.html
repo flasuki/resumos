@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Norma Culta vs Norma Popular 📚</title>
+  <meta name="description" content="Entenda as diferenças entre norma culta e norma popular, seus contextos de uso, características e a importância do respeito à diversidade linguística." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    li {
+      margin-bottom: 0.7rem;
+    }
+    strong {
+      color: #289e6c;
+    }
+    .emoji {
+      margin-right: 0.4rem;
+    }
+    .lead {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      font-size: 1.15rem;
+      color: #2a7a59;
+    }
+    blockquote {
+      background: #e0f7fa;
+      border-left: 5px solid #00acc1;
+      margin: 1rem 0 1.5rem 0;
+      padding: 0.8rem 1rem;
+      font-style: italic;
+      color: #006064;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+    th, td {
+      border: 1px solid #3bb77e;
+      padding: 0.6rem 1rem;
+      text-align: left;
+    }
+    th {
+      background-color: #3bb77e;
+      color: white;
+    }
+    caption {
+      caption-side: top;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #289e6c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão tema -->
+  <button id="toggle-theme" aria-label="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Botão voltar -->
+  <a href="../index.html" class="back-btn" aria-label="Voltar para página principal">
+    ← Voltar para Matérias
+  </a>
+
+  <h1>📚 Norma Culta vs Norma Popular</h1>
+
+  <p class="lead">A língua portuguesa tem várias formas de uso, que variam conforme situação, lugar, idade e grupo social. Destacam-se duas principais: a norma culta e a norma popular (ou linguagem coloquial). Ambas são formas legítimas de comunicação, usadas em contextos diferentes. 🗣️🌍</p>
+
+  <h2>📖 O que é a Norma Culta?</h2>
+  <p>A norma culta segue as regras gramaticais das gramáticas e dicionários. É usada em contextos formais, como:</p>
+  <ul>
+    <li>Redações do ENEM e concursos 🎓</li>
+    <li>Documentos oficiais 📄</li>
+    <li>Notícias, artigos, dissertações 📰</li>
+    <li>Apresentações acadêmicas 🎤</li>
+  </ul>
+  <p><strong>Características da norma culta:</strong></p>
+  <ul>
+    <li>Uso correto da gramática normativa ✅</li>
+    <li>Estrutura elaborada e vocabulário preciso 📚</li>
+    <li>Evita gírias, abreviações e regionalismos 🚫</li>
+  </ul>
+  <blockquote>Exemplo:<br />“Os alunos foram informados sobre as mudanças no calendário escolar.”</blockquote>
+
+  <h2>🗨️ O que é a Norma Popular?</h2>
+  <p>A norma popular é a linguagem falada do dia a dia, espontânea e flexível, usada em contextos informais entre amigos, família, redes sociais, etc.</p>
+  <p><strong>Características da norma popular:</strong></p>
+  <ul>
+    <li>Desvios da norma culta (sem estar “errada” no contexto informal) ⚠️</li>
+    <li>Uso de gírias, expressões regionais, abreviações 🗯️</li>
+    <li>Frases mais curtas e simples 🗣️</li>
+  </ul>
+  <blockquote>Exemplo:<br />“Os menino foi avisado que ia mudar as aula.”</blockquote>
+  <p>Essa frase está na norma popular e pode não ser aceita em redação formal, mas comunica perfeitamente no contexto informal. 😉</p>
+
+  <h2>⚠️ Preconceito Linguístico</h2>
+  <p>Julgar uma pessoa pela forma como fala é preconceito linguístico. Toda forma de linguagem é válida dentro do seu contexto. A escola deve ensinar a norma culta sem desvalorizar a forma popular de falar. 🤝❤️</p>
+
+  <h2>📝 Resumo Final</h2>
+  <table>
+    <caption>Comparação entre Norma Culta e Norma Popular</caption>
+    <thead>
+      <tr>
+        <th>Norma Culta</th>
+        <th>Norma Popular</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Segue regras gramaticais</td><td>Uso informal, cotidiano</td></tr>
+      <tr><td>Contexto formal</td><td>Contexto informal</td></tr>
+      <tr><td>Evita gírias e regionalismos</td><td>Usa expressões populares</td></tr>
+      <tr><td>Usada em textos acadêmicos, oficiais</td><td>Usada em conversas, redes sociais</td></tr>
+    </tbody>
+  </table>
+
+  <h2>💡 Dica importante</h2>
+  <p>Saber usar a norma culta é essencial para situações formais, mas entender e respeitar a norma popular é fundamental para a comunicação cotidiana e para valorizar a diversidade cultural da língua portuguesa. 🌎✨</p>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script>
+    const btn = document.getElementById('toggle-theme');
+    const icon = btn.querySelector('i');
+
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-theme');
+      icon.className = 'fas fa-sun';
+    } else {
+      icon.className = 'fas fa-moon';
+    }
+
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('dark-mode', 'enabled');
+        icon.className = 'fas fa-sun';
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+        icon.className = 'fas fa-moon';
+      }
+    });
+  </script>
+
+</body>
+</html>

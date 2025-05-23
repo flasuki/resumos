@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gêneros Jornalísticos 📰</title>
+  <meta name="description" content="Conheça os principais gêneros jornalísticos: informativos, interpretativos, opinativos e de entretenimento. Saiba a estrutura da notícia e a função do jornalista." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    li {
+      margin-bottom: 0.7rem;
+    }
+    strong {
+      color: #289e6c;
+    }
+    .emoji {
+      margin-right: 0.4rem;
+    }
+    .lead {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      font-size: 1.15rem;
+      color: #2a7a59;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #3bb77e;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão tema -->
+  <button id="toggle-theme" aria-label="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Botão voltar -->
+  <a href="../index.html" class="back-btn" aria-label="Voltar para página principal">
+    ← Voltar para Matérias
+  </a>
+
+  <h1>📰 Gêneros Jornalísticos</h1>
+
+  <p class="lead">Os gêneros jornalísticos são formas textuais usadas em jornais, revistas, rádio, TV e internet para informar o público de forma clara, objetiva e eficiente. São essenciais para o jornalismo e para o estudo da língua portuguesa. 📚✨</p>
+
+  <h2><span class="emoji">🗞️</span> 1. Gêneros Informativos</h2>
+  <p>Transmitir fatos sem interpretações pessoais.</p>
+  <ul>
+    <li><strong>Notícia:</strong> relato objetivo e direto dos fatos.</li>
+    <li><strong>Reportagem:</strong> aprofundamento com investigação e múltiplas fontes.</li>
+    <li><strong>Entrevista:</strong> diálogo com perguntas e respostas para obter informações.</li>
+    <li><strong>Nota:</strong> texto breve sobre um fato recente.</li>
+  </ul>
+
+  <hr />
+
+  <h2><span class="emoji">🔍</span> 2. Gêneros Interpretativos ou Críticos</h2>
+  <p>Analisam os fatos, oferecendo uma visão mais profunda.</p>
+  <ul>
+    <li><strong>Editorial:</strong> texto opinativo da equipe editorial.</li>
+    <li><strong>Artigo de opinião:</strong> texto argumentativo sobre temas relevantes.</li>
+    <li><strong>Análise:</strong> exame detalhado de um assunto.</li>
+    <li><strong>Perfil:</strong> biografia jornalística de uma pessoa.</li>
+    <li><strong>Cronologia:</strong> sequência temporal dos fatos.</li>
+  </ul>
+
+  <hr />
+
+  <h2><span class="emoji">💬</span> 3. Gêneros Opinativos</h2>
+  <p>Expressam a opinião do autor ou instituição.</p>
+  <ul>
+    <li><strong>Coluna:</strong> comentário periódico sobre temas atuais, sempre pelo mesmo autor.</li>
+    <li><strong>Crônica:</strong> texto pessoal que mistura informação e opinião.</li>
+    <li><strong>Comentário:</strong> opinião breve sobre um acontecimento.</li>
+    <li><strong>Carta do leitor:</strong> manifestação do público.</li>
+  </ul>
+
+  <hr />
+
+  <h2><span class="emoji">🎭</span> 4. Gêneros de Entretenimento</h2>
+  <p>Focado em divertir ou informar de forma leve.</p>
+  <ul>
+    <li><strong>Horóscopo:</strong> previsões astrológicas.</li>
+    <li><strong>Tirinha:</strong> quadrinhos de humor.</li>
+    <li><strong>Curiosidades:</strong> fatos interessantes e divertidos.</li>
+    <li><strong>Charge:</strong> desenho humorístico ou crítico.</li>
+  </ul>
+
+  <hr />
+
+  <h2>🏗️ Estrutura da Notícia</h2>
+  <p>A notícia segue a pirâmide invertida, organizando as informações da mais importante para a menos relevante, facilitando a leitura rápida e o corte do texto. ⚔️📋</p>
+  <ul>
+    <li><strong>Manchete:</strong> título principal e chamativo 📰</li>
+    <li><strong>Título auxiliar:</strong> complementa a manchete ➕</li>
+    <li><strong>Lead (lide):</strong> primeiro parágrafo com as informações essenciais (o quê, quem, quando, onde, como e por quê) 🕵️‍♂️</li>
+    <li><strong>Corpo do texto:</strong> desenvolvimento com detalhes adicionais 📖</li>
+  </ul>
+
+  <hr />
+
+  <h2>🎯 Função e Responsabilidade do Jornalista</h2>
+  <p>O jornalista deve antecipar dúvidas, explicando fatos com clareza e objetividade, usando linguagem acessível e instigante. ✍️💡</p>
+  <p>O uso de fontes primárias e secundárias (documentos, entrevistas, agências) garante a veracidade e profundidade da informação. 📑✅</p>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script>
+    const btn = document.getElementById('toggle-theme');
+    const icon = btn.querySelector('i');
+
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-theme');
+      icon.className = 'fas fa-sun';
+    } else {
+      icon.className = 'fas fa-moon';
+    }
+
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('dark-mode', 'enabled');
+        icon.className = 'fas fa-sun';
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+        icon.className = 'fas fa-moon';
+      }
+    });
+  </script>
+
+</body>
+</html>
